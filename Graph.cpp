@@ -5,7 +5,11 @@ void Graph::infectNode(int nodeInd) {
     nodesInfection[nodeInd] = 2;
 }
 
-int Graph::getNodeToSpreadTo(int fromNodeInd) {
+bool Graph::isInfected(int nodeInd) {
+    return nodesInfection[nodeInd] == 2;
+}
+
+int Graph::getNodeToSpreadTo(int fromNodeInd) const {
     for (int nodeInd = 0; nodeInd < numOfNodes; nodeInd++){
         if (edges[fromNodeInd][nodeInd] == 1 && !isCarrier(nodeInd))
             return nodeInd;
@@ -13,7 +17,7 @@ int Graph::getNodeToSpreadTo(int fromNodeInd) {
     return -1; // in case there is no Node to spread to
 }
 
-bool Graph::isCarrier(int nodeInd) {
+bool Graph::isCarrier(int nodeInd) const {
     return nodesInfection[nodeInd] >= 1;
 }
 

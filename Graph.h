@@ -9,9 +9,9 @@ public:
     
     void infectNode(int nodeInd);
     bool isInfected(int nodeInd);
-    int getNodeToSpreadTo(int fromNodeInd);
-    bool isCarrier(int nodeInd);
 
+    int getNodeToSpreadTo(int fromNodeInd) const;
+    bool isCarrier(int nodeInd) const;
     void setCarrier(int newCarrierNodeInd);
 
 private:

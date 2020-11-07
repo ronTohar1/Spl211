@@ -18,16 +18,25 @@ void Session::addAgent(const Agent &agent) {
     agents.push_back(a);
 }
 
+void Session::setGraph(const Graph &graph) {
+    g = graph;
+}
+
 void Session::enqueueInfected(int nodeInd) {
     infectionQueue.push(nodeInd);
 }
 
 int Session::dequeueInfected() {
-
-
+    int infectedNodeInd = infectionQueue.front();
+    infectionQueue.pop();
+    return infectedNodeInd;
 }
 
-int Session::getNodeToSpreadTo(int nodeFromInd) {
+TreeType Session::getTreeType() const {
+    return treeType;
+}
+
+int Session::getNodeToSpreadTo(int nodeFromInd) const {
     return g.getNodeToSpreadTo(nodeFromInd);
 };
 
@@ -40,7 +49,7 @@ void Session::updateInfected(int newInfectedNodeInd) {
     enqueueInfected(newInfectedNodeInd);
 }
 
-bool Session::terminationConditionsSatisfied(){
+bool Session::terminationConditionsSatisfied() const {
     // TODO: implement
 }
 
