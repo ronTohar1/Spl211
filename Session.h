@@ -33,6 +33,6 @@ private:
     std::queue<int> infectionQueue;
 
     bool TerminationConditionsSatisfied();
-}
+};
 
 #endif

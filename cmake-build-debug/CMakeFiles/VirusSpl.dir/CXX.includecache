@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Agent.cpp
-Agent.h
-/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Agent.h
-
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Agent.h
 vector
 -
@@ -37,16 +33,4 @@ queue
 -
 Graph.h
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Graph.h
-
-/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Virus.cpp
-vector
--
-Session.h
-/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Session.h
-Agent.h
-/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Agent.h
-
-/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/main.cpp
-iostream
--
 

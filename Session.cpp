@@ -8,7 +8,7 @@ void Session::simulate(){
     while (!TerminationConditionsSatisfied()){
         cyclesStartingNumOfAgents = agents.size();
         for (int i = 0; i < cyclesStartingNumOfAgents; ++i) {
-            agents[i]->act();
+            agents[i]->act(*this);
         }
     }
 };
@@ -19,7 +19,7 @@ void Session::addAgent(const Agent &agent) {
 }
 
 void Session::enqueueInfected(int nodeInd) {
-    if(!g.isInfected(nodeInd))//Virus is not infected
+    if(!g.isInfected(nodeInd)) // Virus is not infected
     {
         g.infectNode(nodeInd);
         infectionQueue.push(nodeInd);
@@ -37,4 +37,3 @@ bool Session::TerminationConditionsSatisfied(){
 //
 // Created by spl211 on 05/11/2020.
 //
-

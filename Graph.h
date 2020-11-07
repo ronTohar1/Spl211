@@ -14,6 +14,6 @@ private:
     std::vector<std::vector<int>> edges;
     int numOfVeritces;
     std::vector<int> infectedVertices;
-}
+};
 
 #endif
