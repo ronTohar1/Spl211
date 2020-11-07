@@ -68,10 +68,10 @@ RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211
+CMAKE_SOURCE_DIR = /home/spl211/CLionProjects/VirusSpl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug
+CMAKE_BINARY_DIR = /home/spl211/CLionProjects/VirusSpl/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles /home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -224,6 +224,33 @@ Session.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Session.cpp.s
 .PHONY : Session.cpp.s
 
+Tree.o: Tree.cpp.o
+
+.PHONY : Tree.o
+
+# target to build an object file
+Tree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Tree.cpp.o
+.PHONY : Tree.cpp.o
+
+Tree.i: Tree.cpp.i
+
+.PHONY : Tree.i
+
+# target to preprocess a source file
+Tree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Tree.cpp.i
+.PHONY : Tree.cpp.i
+
+Tree.s: Tree.cpp.s
+
+.PHONY : Tree.s
+
+# target to generate assembly for a file
+Tree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Tree.cpp.s
+.PHONY : Tree.cpp.s
+
 Virus.o: Virus.cpp.o
 
 .PHONY : Virus.o
@@ -296,6 +323,9 @@ help:
 	@echo "... Session.o"
 	@echo "... Session.i"
 	@echo "... Session.s"
+	@echo "... Tree.o"
+	@echo "... Tree.i"
+	@echo "... Tree.s"
 	@echo "... Virus.o"
 	@echo "... Virus.i"
 	@echo "... Virus.s"

@@ -2,6 +2,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/VirusSpl.dir/Agent.cpp.o"
   "CMakeFiles/VirusSpl.dir/Graph.cpp.o"
   "CMakeFiles/VirusSpl.dir/Session.cpp.o"
+  "CMakeFiles/VirusSpl.dir/Tree.cpp.o"
   "CMakeFiles/VirusSpl.dir/Virus.cpp.o"
   "CMakeFiles/VirusSpl.dir/main.cpp.o"
   "VirusSpl"

@@ -31,6 +31,8 @@ public:
 
     void updateInfected(int newInfectedNodeInd);
 
+    Const Graph* getGraph() const;
+
 private:
     Graph g;
     TreeType treeType;
