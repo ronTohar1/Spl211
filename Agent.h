@@ -29,6 +29,7 @@ public:
     virtual void act(Session& session);
 private:
     const int nodeInd;
+    bool infectedNode;
 };
 
 #endif

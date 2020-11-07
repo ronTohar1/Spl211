@@ -5,10 +5,10 @@
 
 void Session::simulate(){
     int cyclesStartingNumOfAgents;
-    while (!TerminationConditionsSatisfied()){
+    while (!terminationConditionsSatisfied()){
         cyclesStartingNumOfAgents = agents.size();
-        for (int i = 0; i < cyclesStartingNumOfAgents; ++i) {
-            agents[i]->act();
+        for (int i = 0; i < cyclesStartingNumOfAgents; i++) {
+            agents[i]->act(*this);
         }
     }
 };
@@ -19,11 +19,7 @@ void Session::addAgent(const Agent &agent) {
 }
 
 void Session::enqueueInfected(int nodeInd) {
-    if(!g.isInfected(nodeInd))//Virus is not infected
-    {
-        g.infectNode(nodeInd);
-        infectionQueue.push(nodeInd);
-    }
+    infectionQueue.push(nodeInd);
 }
 
 int Session::dequeueInfected() {
@@ -31,10 +27,23 @@ int Session::dequeueInfected() {
 
 }
 
-bool Session::TerminationConditionsSatisfied(){
-    // TODO: implement
+int Session::getNodeToSpreadTo(int nodeFromInd) {
+    return g.getNodeToSpreadTo(nodeFromInd);
 };
+
+void Session::addCarrier(int nodeInd) {
+    g.setCarrier(nodeInd);
+}
+
+void Session::updateInfected(int newInfectedNodeInd) {
+    g.infectNode(newInfectedNodeInd);
+    enqueueInfected(newInfectedNodeInd);
+}
+
+bool Session::terminationConditionsSatisfied(){
+    // TODO: implement
+}
+
 //
 // Created by spl211 on 05/11/2020.
 //
-

@@ -25,14 +25,19 @@ public:
     void enqueueInfected(int);
     int dequeueInfected();
     TreeType getTreeType() const;
-    
+
+    int getNodeToSpreadTo(int nodeFromInd);
+    void addCarrier(int nodeInd);
+
+    void updateInfected(int newInfectedNodeInd);
+
 private:
     Graph g;
     TreeType treeType;
     std::vector<Agent*> agents;
     std::queue<int> infectionQueue;
 
-    bool TerminationConditionsSatisfied();
-}
+    bool terminationConditionsSatisfied();
+};
 
 #endif

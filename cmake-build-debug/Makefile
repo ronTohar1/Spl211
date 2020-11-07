@@ -68,10 +68,10 @@ RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spl211/CLionProjects/VirusSpl
+CMAKE_SOURCE_DIR = /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spl211/CLionProjects/VirusSpl/cmake-build-debug
+CMAKE_BINARY_DIR = /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles /home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -169,6 +169,33 @@ Agent.s: Agent.cpp.s
 Agent.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Agent.cpp.s
 .PHONY : Agent.cpp.s
+
+Graph.o: Graph.cpp.o
+
+.PHONY : Graph.o
+
+# target to build an object file
+Graph.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Graph.cpp.o
+.PHONY : Graph.cpp.o
+
+Graph.i: Graph.cpp.i
+
+.PHONY : Graph.i
+
+# target to preprocess a source file
+Graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Graph.cpp.i
+.PHONY : Graph.cpp.i
+
+Graph.s: Graph.cpp.s
+
+.PHONY : Graph.s
+
+# target to generate assembly for a file
+Graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Graph.cpp.s
+.PHONY : Graph.cpp.s
 
 Session.o: Session.cpp.o
 
@@ -263,6 +290,9 @@ help:
 	@echo "... Agent.o"
 	@echo "... Agent.i"
 	@echo "... Agent.s"
+	@echo "... Graph.o"
+	@echo "... Graph.i"
+	@echo "... Graph.s"
 	@echo "... Session.o"
 	@echo "... Session.i"
 	@echo "... Session.s"
