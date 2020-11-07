@@ -26,7 +26,7 @@ public:
     int dequeueInfected();
     TreeType getTreeType() const;
 
-    int getNodeToSpreadTo(int nodeFrom);
+    int getNodeToSpreadTo(int nodeFromInd);
 
 private:
     Graph g;
@@ -34,7 +34,7 @@ private:
     std::vector<Agent*> agents;
     std::queue<int> infectionQueue;
 
-    bool TerminationConditionsSatisfied();
+    bool terminationConditionsSatisfied();
 };
 
 #endif

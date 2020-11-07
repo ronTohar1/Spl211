@@ -9,11 +9,11 @@ public:
     
     void infectNode(int nodeInd);
     bool isInfected(int nodeInd);
-    int getNodeToSpread(int NodeInd);
+    int getNodeToSpreadTo(int fromNodeInd);
 private:
     std::vector<std::vector<int>> edges;
     int numOfVeritces;
-    std::vector<int> infectedVertices;
+    std::vector<int> verticesInfections;
 };
 
 #endif

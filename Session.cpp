@@ -5,7 +5,7 @@
 
 void Session::simulate(){
     int cyclesStartingNumOfAgents;
-    while (!TerminationConditionsSatisfied()){
+    while (!terminationConditionsSatisfied()){
         cyclesStartingNumOfAgents = agents.size();
         for (int i = 0; i < cyclesStartingNumOfAgents; ++i) {
             agents[i]->act(*this);
@@ -31,13 +31,13 @@ int Session::dequeueInfected() {
 
 }
 
-bool Session::TerminationConditionsSatisfied(){
+int Session::getNodeToSpreadTo(int nodeFromInd) {
+    return g.getNodeToSpreadTo(nodeFromInd);
+};
+
+bool Session::terminationConditionsSatisfied(){
     // TODO: implement
 }
-
-int Session::getNodeToSpreadTo(int nodeFrom) {
-    return g.getNodeToSpread(nodeFrom);
-};
 //
 // Created by spl211 on 05/11/2020.
 //

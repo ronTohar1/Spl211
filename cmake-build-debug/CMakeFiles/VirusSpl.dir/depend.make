@@ -6,6 +6,9 @@ CMakeFiles/VirusSpl.dir/Agent.cpp.o: ../Agent.h
 CMakeFiles/VirusSpl.dir/Agent.cpp.o: ../Graph.h
 CMakeFiles/VirusSpl.dir/Agent.cpp.o: ../Session.h
 
+CMakeFiles/VirusSpl.dir/Graph.cpp.o: ../Graph.cpp
+CMakeFiles/VirusSpl.dir/Graph.cpp.o: ../Graph.h
+
 CMakeFiles/VirusSpl.dir/Session.cpp.o: ../Agent.h
 CMakeFiles/VirusSpl.dir/Session.cpp.o: ../Graph.h
 CMakeFiles/VirusSpl.dir/Session.cpp.o: ../Session.cpp
