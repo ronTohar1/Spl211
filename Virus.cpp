@@ -13,5 +13,7 @@ Virus * Virus::clone() const {
 
 void Virus::act(Session &session) {
     session.enqueueInfected(nodeInd);
-
+    int nodeToSpreadTo = session.getNodeToSpreadTo(nodeInd);
+    session.addAgent(Virus(nodeToSpreadTo));
+    session.addCarrier(nodeToSpreadTo);
 }

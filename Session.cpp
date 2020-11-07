@@ -33,6 +33,10 @@ int Session::dequeueInfected() {
 
 bool Session::TerminationConditionsSatisfied(){
     // TODO: implement
+}
+
+int Session::getNodeToSpreadTo(int nodeFrom) {
+    return g.getNodeToSpread(nodeFrom);
 };
 //
 // Created by spl211 on 05/11/2020.
