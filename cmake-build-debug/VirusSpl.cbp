@@ -90,6 +90,12 @@
 		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Agent.h">
 			<Option target="VirusSpl"/>
 		</Unit>
+		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Graph.cpp">
+			<Option target="VirusSpl"/>
+		</Unit>
+		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Graph.h">
+			<Option target="VirusSpl"/>
+		</Unit>
 		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Session.cpp">
 			<Option target="VirusSpl"/>
 		</Unit>

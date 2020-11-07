@@ -170,6 +170,33 @@ Agent.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Agent.cpp.s
 .PHONY : Agent.cpp.s
 
+Graph.o: Graph.cpp.o
+
+.PHONY : Graph.o
+
+# target to build an object file
+Graph.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Graph.cpp.o
+.PHONY : Graph.cpp.o
+
+Graph.i: Graph.cpp.i
+
+.PHONY : Graph.i
+
+# target to preprocess a source file
+Graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Graph.cpp.i
+.PHONY : Graph.cpp.i
+
+Graph.s: Graph.cpp.s
+
+.PHONY : Graph.s
+
+# target to generate assembly for a file
+Graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Graph.cpp.s
+.PHONY : Graph.cpp.s
+
 Session.o: Session.cpp.o
 
 .PHONY : Session.o
@@ -263,6 +290,9 @@ help:
 	@echo "... Agent.o"
 	@echo "... Agent.i"
 	@echo "... Agent.s"
+	@echo "... Graph.o"
+	@echo "... Graph.i"
+	@echo "... Graph.s"
 	@echo "... Session.o"
 	@echo "... Session.i"
 	@echo "... Session.s"
