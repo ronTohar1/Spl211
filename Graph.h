@@ -10,10 +10,14 @@ public:
     void infectNode(int nodeInd);
     bool isInfected(int nodeInd);
     int getNodeToSpreadTo(int fromNodeInd);
+    bool isCarrier(int nodeInd);
+
+    void setCarrier(int newCarrierNodeInd);
+
 private:
     std::vector<std::vector<int>> edges;
-    int numOfVeritces;
-    std::vector<int> verticesInfections;
+    int numOfNodes;
+    std::vector<int> nodesInfection;
 };
 
 #endif

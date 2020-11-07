@@ -27,6 +27,9 @@ public:
     TreeType getTreeType() const;
 
     int getNodeToSpreadTo(int nodeFromInd);
+    void addCarrier(int nodeInd);
+
+    void updateInfected(int newInfectedNodeInd);
 
 private:
     Graph g;
