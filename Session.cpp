@@ -1,7 +1,16 @@
 #include "Session.h"
 #include <vector>
 #include "Agent.h"
+#include "json.hpp"
+#include <fstream>
 
+
+Session::Session(const std::string &path) {
+    nlohmann::json jsonSessionData = getJsonDataFromFile(path);
+    setGraph(Graph(jsonSessionData["Graph"]));
+//    agents = jsonSessionData["Agents"];
+
+}
 
 void Session::simulate(){
     int cyclesStartingNumOfAgents;
@@ -12,6 +21,15 @@ void Session::simulate(){
         }
     }
 };
+
+
+
+nlohmann::json Session::getJsonDataFromFile(const std::string &path) {
+    std::ifstream fileData(path);
+    nlohmann::json jsonData;
+    jsonData << fileData;
+    return jsonData;
+}
 
 void Session::addAgent(const Agent &agent) {
     Agent *a= agent.clone();
@@ -49,10 +67,10 @@ void Session::updateInfected(int newInfectedNodeInd) {
     enqueueInfected(newInfectedNodeInd);
 }
 
-bool Session::terminationConditionsSatisfied() const {
-    // TODO: implement
+void Session::isolateNode(int nodeInd) {
+    g.isolateNode(nodeInd);
 }
 
-//
-// Created by spl211 on 05/11/2020.
-//
+bool Session::terminationConditionsSatisfied() const {
+    return !g.areThereActiveConnectedComponents();
+}

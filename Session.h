@@ -5,6 +5,8 @@
 #include <string>
 #include <queue>
 #include "Graph.h"
+#include <map>;
+#include "json.hpp"
 
 class Agent;
 
@@ -29,6 +31,7 @@ public:
     int getNodeToSpreadTo(int nodeFromInd) const;
     void updateInfected(int newInfectedNodeInd);
     void addCarrier(int nodeInd);
+    void isolateNode(int nodeInd);
 
 private:
     Graph g;
@@ -37,6 +40,7 @@ private:
     std::queue<int> infectionQueue;
 
     bool terminationConditionsSatisfied() const;
+    static nlohmann::json getJsonDataFromFile(const std::string& path);
 };
 
 #endif
