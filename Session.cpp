@@ -7,9 +7,33 @@
 
 Session::Session(const std::string &path) {
     nlohmann::json jsonSessionData = getJsonDataFromFile(path);
-    setGraph(Graph(jsonSessionData["Graph"]));
-//    agents = jsonSessionData["Agents"];
+    setGraph(Graph(jsonSessionData["graph"]));
+    addAgents(jsonSessionData["agents"]);
+    setTreeType(jsonSessionData["tree"]);
+}
 
+nlohmann::json Session::getJsonDataFromFile(const std::string &path) {
+    std::ifstream fileData(path);
+    nlohmann::json jsonData;
+    jsonData << fileData;
+    return jsonData;
+}
+
+void Session::addAgents(nlohmann::json jsonSessionData) {
+    for (nlohmann::json jsonAgentData : jsonSessionData){
+        addAgent(jsonAgentData);
+    }
+}
+
+void Session::addAgent(nlohmann::json jsonAgentData) {
+    Agent *newAgent;
+    if (jsonAgentData[0] == "V"){
+        newAgent = new Virus(jsonAgentData[1]);
+    }
+    else if (jsonAgentData[0] == "C"){
+        newAgent = new ContactTracer();
+    }
+    agents.push_back(newAgent);
 }
 
 void Session::simulate(){
@@ -21,15 +45,6 @@ void Session::simulate(){
         }
     }
 };
-
-
-
-nlohmann::json Session::getJsonDataFromFile(const std::string &path) {
-    std::ifstream fileData(path);
-    nlohmann::json jsonData;
-    jsonData << fileData;
-    return jsonData;
-}
 
 void Session::addAgent(const Agent &agent) {
     Agent *a= agent.clone();
@@ -73,4 +88,13 @@ void Session::isolateNode(int nodeInd) {
 
 bool Session::terminationConditionsSatisfied() const {
     return !g.areThereActiveConnectedComponents();
+}
+
+void Session::setTreeType(const std::string &stringTreeType) {
+    if (stringTreeType == "C")
+        treeType = Cycle;
+    else if (stringTreeType == "M")
+        treeType = MaxRank;
+    else if (stringTreeType == "R")
+        treeType = Root;
 }
