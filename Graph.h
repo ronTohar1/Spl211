@@ -19,6 +19,8 @@ public:
     bool isInfected(int nodeInd) const;
     void isolateNode(int nodeInd);
     void removeEdge(int nodeInd1, int nodeInd2);
+    const std::vector<std::vector<int>> &getEdges() const;
+    std::vector<int> *getAllInfected() const;
 
 private:
     std::vector<std::vector<int>> edges;

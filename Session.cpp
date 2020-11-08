@@ -30,6 +30,7 @@ void Session::addAgent(const nlohmann::json &jsonAgentData) {
     Agent *newAgent;
     if (jsonAgentData[0] == "V"){
         newAgent = new Virus(jsonAgentData[1]);
+        g.setCarrier(jsonAgentData[1]);
     }
     else if (jsonAgentData[0] == "C"){
         newAgent = new ContactTracer();
@@ -45,6 +46,7 @@ void Session::simulate(){
             agents[i]->act(*this);
         }
     }
+    writeOutput();
 };
 
 void Session::addAgent(const Agent &agent) {
@@ -98,4 +100,14 @@ void Session::setTreeType(const std::string &stringTreeType) {
         treeType = MaxRank;
     else if (stringTreeType == "R")
         treeType = Root;
+}
+
+void Session::writeOutput() const {
+    std::ofstream outputFile("../output.json");
+    nlohmann::json jsonOutput;
+    jsonOutput["graph"] = g.getEdges();
+    std::vector<int> *infectedNodes = g.getAllInfected();
+    jsonOutput["infected"] = *infectedNodes;
+    outputFile << jsonOutput;
+    delete infectedNodes;
 }

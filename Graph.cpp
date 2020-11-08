@@ -84,6 +84,19 @@ void Graph::removeDirectedEdge(int nodeIndFrom, int nodeIndTo) {
     edges[nodeIndFrom][nodeIndTo] = 0;
 }
 
+const std::vector<std::vector<int>> &Graph::getEdges() const {
+    return edges;
+}
+
+std::vector<int> *Graph::getAllInfected() const {
+    std::vector<int> *infectedNodes = new std::vector<int>();
+    for (int nodeInd = 0; nodeInd < numOfNodes; nodeInd++) {
+        if (isInfected(nodeInd))
+            infectedNodes->push_back(nodeInd);
+    }
+    return infectedNodes;
+}
+
 //void Graph::initCarriers(std::vector<int> carriers) {
 //    std::vector<bool> inExistingConnectedComponent(carriers.size(), false);
 //    for (int carrier : carriers){

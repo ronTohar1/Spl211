@@ -5,7 +5,7 @@
 #include <string>
 #include <queue>
 #include "Graph.h"
-#include <map>;
+#include <map>
 #include "json.hpp"
 
 class Agent;
@@ -44,6 +44,8 @@ private:
     void addAgent(const nlohmann::json& jsonAgentData);
     void setTreeType(const std::string &stringTreeType);
     static nlohmann::json* getJsonDataFromFile(const std::string& path);
+
+    void writeOutput() const;
 };
 
 #endif
