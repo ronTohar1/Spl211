@@ -40,11 +40,10 @@ private:
     std::queue<int> infectionQueue;
 
     bool terminationConditionsSatisfied() const;
-    void addAgents(nlohmann::json jsonSessionData);
-    void addAgent(nlohmann::json jsonAgentData);
-    static nlohmann::json getJsonDataFromFile(const std::string& path);
-
+    void addAgents(const nlohmann::json& jsonSessionData);
+    void addAgent(const nlohmann::json& jsonAgentData);
     void setTreeType(const std::string &stringTreeType);
+    static nlohmann::json* getJsonDataFromFile(const std::string& path);
 };
 
 #endif

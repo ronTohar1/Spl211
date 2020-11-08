@@ -6,26 +6,27 @@
 
 
 Session::Session(const std::string &path) {
-    nlohmann::json jsonSessionData = getJsonDataFromFile(path);
-    setGraph(Graph(jsonSessionData["graph"]));
-    addAgents(jsonSessionData["agents"]);
-    setTreeType(jsonSessionData["tree"]);
+    nlohmann::json* jsonSessionData = getJsonDataFromFile(path);
+    setGraph(Graph((*jsonSessionData)["graph"]));
+    addAgents((*jsonSessionData)["agents"]);
+    setTreeType((*jsonSessionData)["tree"]);
+    delete jsonSessionData;
 }
 
-nlohmann::json Session::getJsonDataFromFile(const std::string &path) {
+nlohmann::json* Session::getJsonDataFromFile(const std::string &path) {
     std::ifstream fileData(path);
-    nlohmann::json jsonData;
-    jsonData << fileData;
+    nlohmann::json* jsonData = new nlohmann::json();
+    (*jsonData) << fileData;
     return jsonData;
 }
 
-void Session::addAgents(nlohmann::json jsonSessionData) {
+void Session::addAgents(const nlohmann::json& jsonSessionData) {
     for (nlohmann::json jsonAgentData : jsonSessionData){
         addAgent(jsonAgentData);
     }
 }
 
-void Session::addAgent(nlohmann::json jsonAgentData) {
+void Session::addAgent(const nlohmann::json &jsonAgentData) {
     Agent *newAgent;
     if (jsonAgentData[0] == "V"){
         newAgent = new Virus(jsonAgentData[1]);
