@@ -33,6 +33,8 @@ public:
     void addCarrier(int nodeInd);
     void isolateNode(int nodeInd);
 
+    Const Graph* getGraph() const;
+
 private:
     Graph g;
     TreeType treeType;

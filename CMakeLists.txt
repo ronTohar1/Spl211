@@ -3,4 +3,4 @@ project(VirusSpl)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(VirusSpl main.cpp Session.cpp Agent.cpp Virus.cpp Graph.cpp)
+add_executable(VirusSpl main.cpp Session.cpp Agent.cpp Virus.cpp Graph.cpp Tree.cpp)

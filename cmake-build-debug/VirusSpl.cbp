@@ -102,6 +102,12 @@
 		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Session.h">
 			<Option target="VirusSpl"/>
 		</Unit>
+		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Tree.cpp">
+			<Option target="VirusSpl"/>
+		</Unit>
+		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Tree.h">
+			<Option target="VirusSpl"/>
+		</Unit>
 		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Virus.cpp">
 			<Option target="VirusSpl"/>
 		</Unit>

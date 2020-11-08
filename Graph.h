@@ -2,6 +2,7 @@
 #define GRAPH_H_
 
 #include <vector>
+#include <queue>
 
 class Graph{
 public:
@@ -21,6 +22,9 @@ public:
     void removeEdge(int nodeInd1, int nodeInd2);
     const std::vector<std::vector<int>> &getEdges() const;
     std::vector<int> *getAllInfected() const;
+    //Methods added for Tree class
+    std::queue<int>* getNeighbors(int NodeInd) const;//Returns the neighbours of a node sorted by their Index.
+    int getNumOfNodes() const;
 
 private:
     std::vector<std::vector<int>> edges;

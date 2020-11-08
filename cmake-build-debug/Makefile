@@ -224,6 +224,33 @@ Session.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Session.cpp.s
 .PHONY : Session.cpp.s
 
+Tree.o: Tree.cpp.o
+
+.PHONY : Tree.o
+
+# target to build an object file
+Tree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Tree.cpp.o
+.PHONY : Tree.cpp.o
+
+Tree.i: Tree.cpp.i
+
+.PHONY : Tree.i
+
+# target to preprocess a source file
+Tree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Tree.cpp.i
+.PHONY : Tree.cpp.i
+
+Tree.s: Tree.cpp.s
+
+.PHONY : Tree.s
+
+# target to generate assembly for a file
+Tree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Tree.cpp.s
+.PHONY : Tree.cpp.s
+
 Virus.o: Virus.cpp.o
 
 .PHONY : Virus.o
@@ -296,6 +323,9 @@ help:
 	@echo "... Session.o"
 	@echo "... Session.i"
 	@echo "... Session.s"
+	@echo "... Tree.o"
+	@echo "... Tree.i"
+	@echo "... Tree.s"
 	@echo "... Virus.o"
 	@echo "... Virus.i"
 	@echo "... Virus.s"
