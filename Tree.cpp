@@ -21,7 +21,7 @@ Tree* Tree::createTree(const Session &session, int rootLabel) {
     for (int i = 0; i < numOfNodes; ++i) {
         visitedVertices->push_back(false);
     }
-    visitedVertices->at(rootLabel)=true;
+    (*visitedVertices)[rootLabel]=true;
     myTree->createChildrenTree(visitedVertices,g,type);
 
 
@@ -34,14 +34,14 @@ void Tree::createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,
     while(!neighboursOfRoot.empty()){
         int neighbour=neighboursOfRoot.front();
         neighboursOfRoot.pop();
-        if(!visitedVertices->at(neighbour))
+        if(!(*visitedVertices)[neighbour])
             notVisitedNeighbours.push(neighbour);
     }
     //Going through all of the neighbours that were not visited yet and adding them to this tree's children vector.
     while(!notVisitedNeighbours.empty()) {
         const int vertex = notVisitedNeighbours.front();
         notVisitedNeighbours.pop();
-        visitedVertices->at(vertex) = true;
+        (*visitedVertices)[vertex] = true;
         const Tree &childTreeRef=getNewTree(type, vertex);
         this->addChild(childTreeRef);
 
@@ -80,3 +80,9 @@ void Tree::addChild(const Tree &child) {
 
 }
 
+int Tree::getRank() {
+    return children.size();
+}
+
+int Tree::getRoot() {return this->node;}
+vector<Tree*> Tree::getChildren() {return this->children;}

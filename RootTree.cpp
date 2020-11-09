@@ -4,10 +4,9 @@
 
 #include "Tree.h"
 
-RootTree::RootTree(int rootLabel): {
-
+RootTree::RootTree(int rootLabel):Tree(rootLabel) {
 }
 
 int RootTree::traceTree() {
-
+        return this->getRoot();
 }

@@ -17,6 +17,12 @@ private:
 
     static const Tree& getNewTree(TreeType type,int rootLabel);
     void createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,TreeType type);
+
+protected:
+    int getRoot();
+    std::vector<Tree*> getChildren();
+    int getRank();
+
 };
 
 class CycleTree: public Tree{
@@ -31,6 +37,11 @@ class MaxRankTree: public Tree{
 public:
     MaxRankTree(int rootLabel);
     virtual int traceTree();
+private:
+
+    int getRank();
+    std::vector<int>* getMaxRankNode();
+    std::vector<int>* getMaxRankChild();
 };
 
 class RootTree: public Tree{
