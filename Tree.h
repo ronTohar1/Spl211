@@ -2,7 +2,7 @@
 #define TREE_H_
 
 #include <vector>
-
+#include "Session.h"
 class Session;
 
 class Tree{
@@ -16,6 +16,8 @@ public:
 private:
     int node;
     std::vector<Tree*> children;
+    static Tree* getNewTree(TreeType type,int rootLabel);
+    void createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,TreeType type);
 };
 
 class CycleTree: public Tree{

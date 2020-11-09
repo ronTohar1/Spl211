@@ -33,7 +33,7 @@ public:
     void addCarrier(int nodeInd);
     void isolateNode(int nodeInd);
 
-    const Graph* getGraph() const;
+    const Graph& getGraph() const;
 
 private:
     Graph g;
