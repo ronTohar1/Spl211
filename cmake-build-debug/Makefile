@@ -68,10 +68,10 @@ RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211
+CMAKE_SOURCE_DIR = /home/spl211/CLionProjects/VirusSpl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug
+CMAKE_BINARY_DIR = /home/spl211/CLionProjects/VirusSpl/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles /home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -170,6 +170,33 @@ Agent.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Agent.cpp.s
 .PHONY : Agent.cpp.s
 
+CycleTree.o: CycleTree.cpp.o
+
+.PHONY : CycleTree.o
+
+# target to build an object file
+CycleTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/CycleTree.cpp.o
+.PHONY : CycleTree.cpp.o
+
+CycleTree.i: CycleTree.cpp.i
+
+.PHONY : CycleTree.i
+
+# target to preprocess a source file
+CycleTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/CycleTree.cpp.i
+.PHONY : CycleTree.cpp.i
+
+CycleTree.s: CycleTree.cpp.s
+
+.PHONY : CycleTree.s
+
+# target to generate assembly for a file
+CycleTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/CycleTree.cpp.s
+.PHONY : CycleTree.cpp.s
+
 Graph.o: Graph.cpp.o
 
 .PHONY : Graph.o
@@ -196,6 +223,60 @@ Graph.s: Graph.cpp.s
 Graph.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Graph.cpp.s
 .PHONY : Graph.cpp.s
+
+MaxRankTree.o: MaxRankTree.cpp.o
+
+.PHONY : MaxRankTree.o
+
+# target to build an object file
+MaxRankTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/MaxRankTree.cpp.o
+.PHONY : MaxRankTree.cpp.o
+
+MaxRankTree.i: MaxRankTree.cpp.i
+
+.PHONY : MaxRankTree.i
+
+# target to preprocess a source file
+MaxRankTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/MaxRankTree.cpp.i
+.PHONY : MaxRankTree.cpp.i
+
+MaxRankTree.s: MaxRankTree.cpp.s
+
+.PHONY : MaxRankTree.s
+
+# target to generate assembly for a file
+MaxRankTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/MaxRankTree.cpp.s
+.PHONY : MaxRankTree.cpp.s
+
+RootTree.o: RootTree.cpp.o
+
+.PHONY : RootTree.o
+
+# target to build an object file
+RootTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/RootTree.cpp.o
+.PHONY : RootTree.cpp.o
+
+RootTree.i: RootTree.cpp.i
+
+.PHONY : RootTree.i
+
+# target to preprocess a source file
+RootTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/RootTree.cpp.i
+.PHONY : RootTree.cpp.i
+
+RootTree.s: RootTree.cpp.s
+
+.PHONY : RootTree.s
+
+# target to generate assembly for a file
+RootTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/RootTree.cpp.s
+.PHONY : RootTree.cpp.s
 
 Session.o: Session.cpp.o
 
@@ -317,9 +398,18 @@ help:
 	@echo "... Agent.o"
 	@echo "... Agent.i"
 	@echo "... Agent.s"
+	@echo "... CycleTree.o"
+	@echo "... CycleTree.i"
+	@echo "... CycleTree.s"
 	@echo "... Graph.o"
 	@echo "... Graph.i"
 	@echo "... Graph.s"
+	@echo "... MaxRankTree.o"
+	@echo "... MaxRankTree.i"
+	@echo "... MaxRankTree.s"
+	@echo "... RootTree.o"
+	@echo "... RootTree.i"
+	@echo "... RootTree.s"
 	@echo "... Session.o"
 	@echo "... Session.i"
 	@echo "... Session.s"

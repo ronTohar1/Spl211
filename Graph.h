@@ -23,7 +23,7 @@ public:
     const std::vector<std::vector<int>> &getEdges() const;
     std::vector<int> *getAllInfected() const;
     //Methods added for Tree class
-    std::queue<int> getNeighbors(int NodeInd) const;//Returns the neighbours of a node sorted by their Index.
+    std::queue<int> getNeighbors(int NodeInd) const;//Returns the neighbours of a node (no need sorting).
     int getNumOfNodes() const;
 
 private:

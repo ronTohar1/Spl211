@@ -9,14 +9,13 @@ class Tree{
 public:
     Tree(int rootLabel);
     void addChild(const Tree& child);
-
-
     static Tree* createTree(const Session& session, int rootLabel);
     virtual int traceTree()=0;
 private:
     int node;
     std::vector<Tree*> children;
-    static Tree* getNewTree(TreeType type,int rootLabel);
+
+    static const Tree& getNewTree(TreeType type,int rootLabel);
     void createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,TreeType type);
 };
 
