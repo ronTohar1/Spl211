@@ -9,12 +9,14 @@ using namespace std;
 MaxRankTree::MaxRankTree(int rootLabel):Tree(rootLabel) {}
 
 int MaxRankTree::traceTree() {
-    return (*getMaxRankNode())[1];
+
+    int maxRankVertex= this->maxRankTreeTrace(&ranks);
+    return maxRankVertex;
 }
 
 
 
-vector<int>* MaxRankTree::getMaxRankNode() {
+vector<int>* MaxRankTree::getMaxRankNode(std::vector<int>* ranks) {
     vector<Tree*> children=this->getChildren();
     vector<int> *highestRankNode = new vector<int>();
     highestRankNode->push_back(this->getRank());
@@ -22,21 +24,39 @@ vector<int>* MaxRankTree::getMaxRankNode() {
 
     if(this->getRank()==0)
         return highestRankNode;
-    vector<int>* highestRankChild=this->getMaxRankChild();
+
+    vector<int>* highestRankChild=this->getMaxRankChild(ranks);
     if((*highestRankChild)[0]>(*highestRankNode)[0])
         return highestRankChild;
+
     return highestRankNode;
 }
 
-std::vector<int>* MaxRankTree::getMaxRankChild() {
+std::vector<int>* MaxRankTree::getMaxRankChild(std::vector<int>* ranks) {
 
     vector<Tree*> children=this->getChildren();
-    vector<int>* highestRankNode=((MaxRankTree*)children[0])->getMaxRankNode();
+    int highestRankChild=(children[0])->traceTree();
+
+    vector<int>* highestRankNode=new vector<int>();
+    highestRankNode->push_back(ranks->at(highestRankChild));
+    highestRankNode->push_back(highestRankChild);
+
     for (int i = 1; i < children.size(); ++i) {
-        vector<int>* currHighestRank=((MaxRankTree*)children[i])->getMaxRankNode();
+
+        vector<int>* currHighestRank=new vector<int>();
+        int childHighestRank=(children[i])->traceTree();
+        currHighestRank->push_back(ranks->at(childHighestRank));
+        currHighestRank->push_back(childHighestRank);
+
         if((*currHighestRank)[0]>(*highestRankNode)[0])
             highestRankNode=currHighestRank;
     }
 
     return highestRankNode;
 }
+
+int MaxRankTree::maxRankTreeTrace(std::vector<int>* ranks) {
+    return (*getMaxRankNode(ranks))[1];
+}
+
+

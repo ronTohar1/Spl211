@@ -11,17 +11,21 @@ public:
     void addChild(const Tree& child);
     static Tree* createTree(const Session& session, int rootLabel);
     virtual int traceTree()=0;
+    const std::vector<Tree*> getChildren() const;
+    int getRoot() const;
+    int getRank() const;
+
 private:
     int node;
     std::vector<Tree*> children;
-
     static Tree& getNewTree(TreeType type,int rootLabel);
     void createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,TreeType type);
+    void setRanks(std::vector<int>* ranks,Tree* tree);
 
 protected:
-    int getRoot() const;
-    int getRank() const;
-    const std::vector<Tree*> getChildren() const;
+    int numOfNodes;
+    std::vector<int> ranks;
+
 };
 
 class CycleTree: public Tree{
@@ -37,10 +41,9 @@ public:
     MaxRankTree(int rootLabel);
     virtual int traceTree();
 private:
-
-    int getRank();
-    std::vector<int>* getMaxRankNode();
-    std::vector<int>* getMaxRankChild();
+    int maxRankTreeTrace(std::vector<int>* ranks);
+    std::vector<int>* getMaxRankNode(std::vector<int>* ranks);
+    std::vector<int>* getMaxRankChild(std::vector<int>* ranks);
 };
 
 class RootTree: public Tree{

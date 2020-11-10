@@ -13,7 +13,7 @@ int CycleTree::traceTree() {
         bool flag=false;
     for (int i = 0; i < currCycle && !flag; ++i) {
         if(this->getRank()>0) {
-            children=(*(CycleTree*)(children[0])).getChildren();
+            children=(*(children[0])).getChildren();
         }
         else
         {
