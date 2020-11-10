@@ -15,7 +15,7 @@ Tree* Tree::createTree(const Session &session, int rootLabel) {
     //Using bfs algorithm to create a tree
     const Graph &g = session.getGraph();
     TreeType type = session.getTreeType();//Need to initialize children somehow...? or no need ?
-    Tree *myTree = &(getNewTree(type, rootLabel));
+    Tree *myTree = &(getNewTree(session, rootLabel));
     int numOfNodes = g.getNumOfNodes();
     myTree->numOfNodes = numOfNodes;
 
@@ -24,13 +24,14 @@ Tree* Tree::createTree(const Session &session, int rootLabel) {
         visitedVertices->push_back(false);
     }
     (*visitedVertices)[rootLabel] = true;
-    myTree->createChildrenTree(visitedVertices, g, type);
+    myTree->createChildrenTree(visitedVertices, g, session);
 
     //Setting the ranks vector .
+
     for (int i = 0; i < myTree->numOfNodes; ++i) {
-        myTree->ranks.push_back(0);
+        myTree->getRanks().push_back(0);
     }
-    myTree->setRanks(&(myTree->ranks),myTree);
+    myTree->setRanks((myTree->ranks),myTree);
 
 
     delete visitedVertices;
@@ -46,7 +47,7 @@ void Tree::setRanks(vector<int>* ranks,Tree* tree){
     }
 }
 
-void Tree::createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,TreeType type) {
+void Tree::createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,Session session) {
     queue<int>* neighboursOfRoot=g.getNeighbors(this->node);
     queue<int> notVisitedNeighbours;
     //taking all of the unvisited neighbours of the root node.
@@ -61,22 +62,23 @@ void Tree::createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,
         const int vertex = notVisitedNeighbours.front();
         notVisitedNeighbours.pop();
         (*visitedVertices)[vertex] = true;
-        Tree &childTreeRef=getNewTree(type, vertex);
+        Tree &childTreeRef=getNewTree(session, vertex);
         this->addChild(childTreeRef);
 
     }
     //Creating children tree to each one of this tree's children.
     for (int i = 0; i < this->children.size(); ++i) {
         Tree* childTree=this->children[i];
-        childTree->createChildrenTree(visitedVertices,g,type);
+        childTree->createChildrenTree(visitedVertices,g,session);
     }
 
     delete neighboursOfRoot;
 }
 
- Tree& Tree::getNewTree(TreeType type,int rootLabel) {
+ Tree& Tree::getNewTree(const Session session,int rootLabel) {
+    TreeType type=session.getTreeType();
     if(type==Cycle)
-        return *(new CycleTree(rootLabel,Session.currCycle));
+        return *(new CycleTree(rootLabel,session.getCurrCycle()));
     else if(type==MaxRank)
         return *(new MaxRankTree(rootLabel));
     else
@@ -103,9 +105,22 @@ void Tree::addChild(const Tree &child) {
 }
 
 int Tree::getRank() const {
-    return children.size();
+    return (getRanks())[this->node];
 }
 
 int Tree::getRoot() const {return this->node;}
 
 const vector<Tree*> Tree::getChildren() const {return this->children;}
+
+Tree::~Tree() {
+
+    delete ranks;
+    for (int i = 0; i < children.size(); ++i) {
+        delete(children[i]);
+    }
+
+}
+
+std::vector<int> &Tree::getRanks() const {
+    return *ranks;
+}

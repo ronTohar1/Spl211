@@ -6,6 +6,7 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Agent.cpp
 Agent.h
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Agent.h
@@ -33,11 +34,37 @@ Graph.h
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Graph.h
 
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Graph.h
+=======
+/home/spl211/CLionProjects/VirusSpl/Agent.cpp
+Agent.h
+/home/spl211/CLionProjects/VirusSpl/Agent.h
+
+/home/spl211/CLionProjects/VirusSpl/Agent.h
+vector
+-
+Session.h
+/home/spl211/CLionProjects/VirusSpl/Session.h
+
+/home/spl211/CLionProjects/VirusSpl/ContactTracer.cpp
+Tree.h
+/home/spl211/CLionProjects/VirusSpl/Tree.h
+Agent.h
+/home/spl211/CLionProjects/VirusSpl/Agent.h
+
+/home/spl211/CLionProjects/VirusSpl/CycleTree.cpp
+Tree.h
+/home/spl211/CLionProjects/VirusSpl/Tree.h
+vector
+/home/spl211/CLionProjects/VirusSpl/vector
+
+/home/spl211/CLionProjects/VirusSpl/Graph.h
+>>>>>>> df2ddca99f33146b28f6a9bc25d58175b2b9c7aa
 vector
 -
 queue
 -
 
+<<<<<<< HEAD
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/MaxRankTree.cpp
 Tree.h
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Tree.h
@@ -61,6 +88,31 @@ fstream
 -
 
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Session.h
+=======
+/home/spl211/CLionProjects/VirusSpl/MaxRankTree.cpp
+Tree.h
+/home/spl211/CLionProjects/VirusSpl/Tree.h
+vector
+/home/spl211/CLionProjects/VirusSpl/vector
+
+/home/spl211/CLionProjects/VirusSpl/RootTree.cpp
+Tree.h
+/home/spl211/CLionProjects/VirusSpl/Tree.h
+
+/home/spl211/CLionProjects/VirusSpl/Session.cpp
+Session.h
+/home/spl211/CLionProjects/VirusSpl/Session.h
+vector
+-
+Agent.h
+/home/spl211/CLionProjects/VirusSpl/Agent.h
+json.hpp
+/home/spl211/CLionProjects/VirusSpl/json.hpp
+fstream
+-
+
+/home/spl211/CLionProjects/VirusSpl/Session.h
+>>>>>>> df2ddca99f33146b28f6a9bc25d58175b2b9c7aa
 vector
 -
 string
@@ -68,6 +120,7 @@ string
 queue
 -
 Graph.h
+<<<<<<< HEAD
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Graph.h
 map
 -
@@ -99,6 +152,39 @@ Agent.h
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Agent.h
 
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/json.hpp
+=======
+/home/spl211/CLionProjects/VirusSpl/Graph.h
+map
+-
+json.hpp
+/home/spl211/CLionProjects/VirusSpl/json.hpp
+
+/home/spl211/CLionProjects/VirusSpl/Tree.cpp
+Tree.h
+/home/spl211/CLionProjects/VirusSpl/Tree.h
+Graph.h
+/home/spl211/CLionProjects/VirusSpl/Graph.h
+vector
+/home/spl211/CLionProjects/VirusSpl/vector
+Session.h
+/home/spl211/CLionProjects/VirusSpl/Session.h
+
+/home/spl211/CLionProjects/VirusSpl/Tree.h
+vector
+-
+Session.h
+/home/spl211/CLionProjects/VirusSpl/Session.h
+
+/home/spl211/CLionProjects/VirusSpl/Virus.cpp
+vector
+-
+Session.h
+/home/spl211/CLionProjects/VirusSpl/Session.h
+Agent.h
+/home/spl211/CLionProjects/VirusSpl/Agent.h
+
+/home/spl211/CLionProjects/VirusSpl/json.hpp
+>>>>>>> df2ddca99f33146b28f6a9bc25d58175b2b9c7aa
 algorithm
 -
 cassert
@@ -432,9 +518,17 @@ limits
 type_traits
 -
 
+<<<<<<< HEAD
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/main.cpp
 iostream
 -
 Session.h
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Session.h
+=======
+/home/spl211/CLionProjects/VirusSpl/main.cpp
+iostream
+-
+Session.h
+/home/spl211/CLionProjects/VirusSpl/Session.h
+>>>>>>> df2ddca99f33146b28f6a9bc25d58175b2b9c7aa
 
