@@ -14,7 +14,7 @@ public:
     const std::vector<Tree*> getChildren() const;
     int getRoot() const;
     int getRank() const;
-
+    
 private:
     int node;
     std::vector<Tree*> children;
@@ -41,9 +41,9 @@ public:
     MaxRankTree(int rootLabel);
     virtual int traceTree();
 private:
-    int maxRankTreeTrace(std::vector<int>* ranks);
-    std::vector<int>* getMaxRankNode(std::vector<int>* ranks);
-    std::vector<int>* getMaxRankChild(std::vector<int>* ranks);
+    int maxRankTreeTrace();
+    std::vector<int>* getMaxRankNode();
+    std::vector<int>* getMaxRankChild();
 };
 
 class RootTree: public Tree{
