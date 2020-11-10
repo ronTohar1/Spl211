@@ -8,40 +8,104 @@
 #include "Session.h"
 using namespace std;
 
-Tree::Tree(int rootLabel):node(rootLabel) {}
+Tree::Tree(int rootLabel):node(rootLabel),numOfNodes(0) {}
 
 
 Tree* Tree::createTree(const Session &session, int rootLabel) {
-        //Using bfs algorithm to create a tree
-        Const Graph* g=session.getGraph();
-        int numOfNodes=g->getNumOfNodes();
-        bool visitedVertices[numOfNodes];
+    //Using bfs algorithm to create a tree
+    const Graph &g = session.getGraph();
+    TreeType type = session.getTreeType();//Need to initialize children somehow...? or no need ?
+    Tree *myTree = &(getNewTree(type, rootLabel));
+    int numOfNodes = g.getNumOfNodes();
+    myTree->numOfNodes = numOfNodes;
+
+    vector<bool> *visitedVertices = new vector<bool>();
     for (int i = 0; i < numOfNodes; ++i) {
-        visitedVertices[i]=false;
+        visitedVertices->push_back(false);
     }
-    int currNode=rootLabel;
-    queue<int>* neighbours1=new queue<int>();
-    queue<int>* neighbours2=new queue<int>();
-    neighbours1->push(currNode);
-    while(!neighbours1->empty() && !neighbours2->empty())
-    {
-        vector<Tree*> *nextLevelNeighbours= new vector<Tree*>();
-        while(!neighbours->empty()) {
-            const int nextNeighbour = neighbours->front();
-            neighbours->pop();
-            if(!visitedVertices[nextNeighbour]) {
-                nextLevelNeighbours->push_back(nextNeighbour);
-                visitedVertices[nextNeighbour]=true;
-            }
-        }
+    (*visitedVertices)[rootLabel] = true;
+    myTree->createChildrenTree(visitedVertices, g, type);
 
+    //Setting the ranks vector .
+    for (int i = 0; i < myTree->numOfNodes; ++i) {
+        myTree->ranks.push_back(0);
     }
+    myTree->setRanks(&(myTree->ranks),myTree);
+
+
+    delete visitedVertices;
+    return myTree;
 
 }
 
-void
+void Tree::setRanks(vector<int>* ranks,Tree* tree){
+    (*ranks)[tree->getRoot()]=(tree->getRank());
+    vector<Tree*> children=tree->getChildren();
+    for (int i = 0; i < children.size(); ++i) {
+        setRanks(ranks,children[i]);
+    }
+}
 
+void Tree::createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,TreeType type) {
+    queue<int>* neighboursOfRoot=g.getNeighbors(this->node);
+    queue<int> notVisitedNeighbours;
+    //taking all of the unvisited neighbours of the root node.
+    while(!neighboursOfRoot->empty()){
+        int neighbour=neighboursOfRoot->front();
+        neighboursOfRoot->pop();
+        if(!(*visitedVertices)[neighbour])
+            notVisitedNeighbours.push(neighbour);
+    }
+    //Going through all of the neighbours that were not visited yet and adding them to this tree's children vector.
+    while(!notVisitedNeighbours.empty()) {
+        const int vertex = notVisitedNeighbours.front();
+        notVisitedNeighbours.pop();
+        (*visitedVertices)[vertex] = true;
+        Tree &childTreeRef=getNewTree(type, vertex);
+        this->addChild(childTreeRef);
+
+    }
+    //Creating children tree to each one of this tree's children.
+    for (int i = 0; i < this->children.size(); ++i) {
+        Tree* childTree=this->children[i];
+        childTree->createChildrenTree(visitedVertices,g,type);
+    }
+
+    delete neighboursOfRoot;
+}
+
+ Tree& Tree::getNewTree(TreeType type,int rootLabel) {
+    if(type==Cycle)
+        return *(new CycleTree(rootLabel,Session.currCycle));
+    else if(type==MaxRank)
+        return *(new MaxRankTree(rootLabel));
+    else
+        return *(new RootTree(rootLabel));
+
+}
+
+//Adding in a sorted way. not needed if we recieve the nodes by order. need to check
 void Tree::addChild(const Tree &child) {
+    const Tree* childTree=&child;
+    int nodeToInsert=child.node;
+    int indexToInsert=0;
+    while(this->children[indexToInsert]->node>nodeToInsert){
+        indexToInsert++;
+    }
+    //why do we get *const* reference if we need to insert a *not const* pointer??
+    this->children.push_back(const_cast<Tree *&&>(childTree));
+    for (int i = this->children.size()-1; i >indexToInsert; --i) {
+        Tree* temp=this->children[i];
+        this->children[i]=this->children[i-1];
+        this->children[i-1]=temp;
+    }
 
 }
 
+int Tree::getRank() const {
+    return children.size();
+}
+
+int Tree::getRoot() const {return this->node;}
+
+const vector<Tree*> Tree::getChildren() const {return this->children;}

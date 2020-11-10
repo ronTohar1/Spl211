@@ -117,3 +117,7 @@ void Session::writeOutput() const {
         infectedNodes = nullptr;
     }
 }
+
+const Graph &Session::getGraph() const {
+    return this->g;
+}
