@@ -97,6 +97,20 @@ std::vector<int> *Graph::getAllInfected() const {
     return infectedNodes;
 }
 
+std::queue<int>* Graph::getNeighbors(int NodeInd) const {
+     std::queue<int>* neighbours= new std::queue<int>();
+    for (int i = 0; i < numOfNodes; ++i) {
+        if(NodeInd!=i)
+            if(edgeExists(NodeInd,i))
+                neighbours->push(i);
+    }
+    return neighbours;
+}
+
+int Graph::getNumOfNodes() const {
+    return numOfNodes;
+}
+
 //void Graph::initCarriers(std::vector<int> carriers) {
 //    std::vector<bool> inExistingConnectedComponent(carriers.size(), false);
 //    for (int carrier : carriers){

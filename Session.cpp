@@ -111,3 +111,7 @@ void Session::writeOutput() const {
     outputFile << jsonOutput;
     delete infectedNodes;
 }
+
+const Graph &Session::getGraph() const {
+    return this->g;
+}

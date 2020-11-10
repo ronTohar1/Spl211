@@ -15,7 +15,7 @@ Tree* Tree::createTree(const Session &session, int rootLabel) {
         //Using bfs algorithm to create a tree
         const Graph &g=session.getGraph();
         TreeType type=session.getTreeType();//Need to initialize children somehow...? or no need ?
-        Tree* myTree=getNewTree(type,rootLabel);
+        Tree* myTree=&(getNewTree(type,rootLabel));
         int numOfNodes=g.getNumOfNodes();
         vector<bool>* visitedVertices= new vector<bool>();
     for (int i = 0; i < numOfNodes; ++i) {
@@ -23,7 +23,7 @@ Tree* Tree::createTree(const Session &session, int rootLabel) {
     }
     (*visitedVertices)[rootLabel]=true;
     myTree->createChildrenTree(visitedVertices,g,type);
-
+    return myTree;
 
 }
 
@@ -42,7 +42,7 @@ void Tree::createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,
         const int vertex = notVisitedNeighbours.front();
         notVisitedNeighbours.pop();
         (*visitedVertices)[vertex] = true;
-        const Tree &childTreeRef=getNewTree(type, vertex);
+        Tree &childTreeRef=getNewTree(type, vertex);
         this->addChild(childTreeRef);
 
     }
@@ -53,7 +53,7 @@ void Tree::createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,
     }
 }
 
-const Tree& Tree::getNewTree(TreeType type,int rootLabel) {
+ Tree& Tree::getNewTree(TreeType type,int rootLabel) {
     if(type==Cycle)
         return *(new CycleTree(rootLabel,Session.currCycle));
     else if(type==MaxRank)
@@ -63,6 +63,7 @@ const Tree& Tree::getNewTree(TreeType type,int rootLabel) {
 
 }
 
+//Adding in a sorted way. not needed if we recieve the nodes by order. need to check
 void Tree::addChild(const Tree &child) {
     const Tree* childTree=&child;
     int nodeToInsert=child.node;
