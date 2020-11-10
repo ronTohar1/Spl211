@@ -10,7 +10,10 @@ Session::Session(const std::string &path) {
     setGraph(Graph((*jsonSessionData)["graph"]));
     addAgents((*jsonSessionData)["agents"]);
     setTreeType((*jsonSessionData)["tree"]);
-    delete jsonSessionData;
+    if (jsonSessionData != nullptr){
+        delete jsonSessionData;
+        jsonSessionData = nullptr;
+    }
 }
 
 nlohmann::json* Session::getJsonDataFromFile(const std::string &path) {
@@ -109,7 +112,10 @@ void Session::writeOutput() const {
     std::vector<int> *infectedNodes = g.getAllInfected();
     jsonOutput["infected"] = *infectedNodes;
     outputFile << jsonOutput;
-    delete infectedNodes;
+    if (infectedNodes != nullptr){
+        delete infectedNodes;
+        infectedNodes = nullptr;
+    }
 }
 
 const Graph &Session::getGraph() const {
