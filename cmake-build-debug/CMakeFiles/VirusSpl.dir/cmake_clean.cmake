@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/VirusSpl.dir/Agent.cpp.o"
+  "CMakeFiles/VirusSpl.dir/ContactTracer.cpp.o"
   "CMakeFiles/VirusSpl.dir/CycleTree.cpp.o"
   "CMakeFiles/VirusSpl.dir/Graph.cpp.o"
   "CMakeFiles/VirusSpl.dir/MaxRankTree.cpp.o"

@@ -16,9 +16,10 @@ int MaxRankTree::traceTree() {
 
 vector<int>* MaxRankTree::getMaxRankNode() {
     vector<Tree*> children=this->getChildren();
-    vector<int>* highestRankNode;
+    vector<int> *highestRankNode = new vector<int>();
     highestRankNode->push_back(this->getRank());
     highestRankNode->push_back(this->getRoot());
+
     if(this->getRank()==0)
         return highestRankNode;
     vector<int>* highestRankChild=this->getMaxRankChild();

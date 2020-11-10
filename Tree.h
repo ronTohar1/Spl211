@@ -19,10 +19,9 @@ private:
     void createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,TreeType type);
 
 protected:
-    int getRoot();
-    std::vector<Tree*> getChildren();
-    int getRank();
-
+    int getRoot() const;
+    int getRank() const;
+    const std::vector<Tree*> getChildren() const;
 };
 
 class CycleTree: public Tree{

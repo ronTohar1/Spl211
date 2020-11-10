@@ -80,9 +80,10 @@ void Tree::addChild(const Tree &child) {
 
 }
 
-int Tree::getRank() {
+int Tree::getRank() const {
     return children.size();
 }
 
-int Tree::getRoot() {return this->node;}
-vector<Tree*> Tree::getChildren() {return this->children;}
+int Tree::getRoot() const {return this->node;}
+
+const vector<Tree*> Tree::getChildren() const {return this->children;}

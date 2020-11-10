@@ -90,6 +90,9 @@
 		<Unit filename="/home/spl211/CLionProjects/VirusSpl/Agent.h">
 			<Option target="VirusSpl"/>
 		</Unit>
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/ContactTracer.cpp">
+			<Option target="VirusSpl"/>
+		</Unit>
 		<Unit filename="/home/spl211/CLionProjects/VirusSpl/CycleTree.cpp">
 			<Option target="VirusSpl"/>
 		</Unit>

@@ -170,6 +170,33 @@ Agent.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Agent.cpp.s
 .PHONY : Agent.cpp.s
 
+ContactTracer.o: ContactTracer.cpp.o
+
+.PHONY : ContactTracer.o
+
+# target to build an object file
+ContactTracer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/ContactTracer.cpp.o
+.PHONY : ContactTracer.cpp.o
+
+ContactTracer.i: ContactTracer.cpp.i
+
+.PHONY : ContactTracer.i
+
+# target to preprocess a source file
+ContactTracer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/ContactTracer.cpp.i
+.PHONY : ContactTracer.cpp.i
+
+ContactTracer.s: ContactTracer.cpp.s
+
+.PHONY : ContactTracer.s
+
+# target to generate assembly for a file
+ContactTracer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/ContactTracer.cpp.s
+.PHONY : ContactTracer.cpp.s
+
 CycleTree.o: CycleTree.cpp.o
 
 .PHONY : CycleTree.o
@@ -398,6 +425,9 @@ help:
 	@echo "... Agent.o"
 	@echo "... Agent.i"
 	@echo "... Agent.s"
+	@echo "... ContactTracer.o"
+	@echo "... ContactTracer.i"
+	@echo "... ContactTracer.s"
 	@echo "... CycleTree.o"
 	@echo "... CycleTree.i"
 	@echo "... CycleTree.s"
