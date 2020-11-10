@@ -20,7 +20,7 @@ private:
     std::vector<Tree*> children;
 
     static Tree& getNewTree(Session session,int rootLabel);
-    void createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,TreeType type);
+    void createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,Session session);
     void setRanks(std::vector<int>* ranks,Tree* tree);
 
 protected:

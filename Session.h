@@ -32,7 +32,7 @@ public:
     void updateInfected(int newInfectedNodeInd);
     void addCarrier(int nodeInd);
     void isolateNode(int nodeInd);
-
+    int getCurrCycle() const;
     const Graph& getGraph() const;
 
 private:
