@@ -15,7 +15,7 @@ Tree* Tree::createTree(const Session &session, int rootLabel) {
     //Using bfs algorithm to create a tree
     const Graph &g = session.getGraph();
     TreeType type = session.getTreeType();//Need to initialize children somehow...? or no need ?
-    Tree *myTree = &(getNewTree(type, rootLabel));
+    Tree *myTree = &(getNewTree(session, rootLabel));
     int numOfNodes = g.getNumOfNodes();
     myTree->numOfNodes = numOfNodes;
 
@@ -30,7 +30,7 @@ Tree* Tree::createTree(const Session &session, int rootLabel) {
     for (int i = 0; i < myTree->numOfNodes; ++i) {
         myTree->ranks.push_back(0);
     }
-    myTree->setRanks(&(myTree->ranks),myTree);
+    myTree->setRanks((myTree->ranks),myTree);
 
 
     delete visitedVertices;
@@ -74,9 +74,10 @@ void Tree::createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,
     delete neighboursOfRoot;
 }
 
- Tree& Tree::getNewTree(TreeType type,int rootLabel) {
+ Tree& Tree::getNewTree(const Session session,int rootLabel) {
+    TreeType type=session.getTreeType();
     if(type==Cycle)
-        return *(new CycleTree(rootLabel,Session.currCycle));
+        return *(new CycleTree(rootLabel,session.getCurrCycle()));
     else if(type==MaxRank)
         return *(new MaxRankTree(rootLabel));
     else
@@ -103,9 +104,22 @@ void Tree::addChild(const Tree &child) {
 }
 
 int Tree::getRank() const {
-    return children.size();
+    return (getRanks())[this->node];
 }
 
 int Tree::getRoot() const {return this->node;}
 
 const vector<Tree*> Tree::getChildren() const {return this->children;}
+
+Tree::~Tree() {
+
+    delete ranks;
+    for (int i = 0; i < children.size(); ++i) {
+        delete(children[i]);
+    }
+
+}
+
+std::vector<int> &Tree::getRanks() const {
+    return *ranks;
+}
