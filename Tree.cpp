@@ -69,7 +69,7 @@ void Tree::createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,
         return (new CycleTree(rootLabel,session.getCurrCycle()));
     else if(type==MaxRank)
         return (new MaxRankTree(rootLabel));
-    else
+    else if(type==Root)
         return (new RootTree(rootLabel));
 
 }
