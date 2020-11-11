@@ -6,11 +6,19 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Graph.cpp
 Graph.h
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Graph.h
 
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Graph.h
+=======
+/home/spl211/CLionProjects/VirusSpl/Graph.cpp
+Graph.h
+/home/spl211/CLionProjects/VirusSpl/Graph.h
+
+/home/spl211/CLionProjects/VirusSpl/Graph.h
+>>>>>>> 6d6bb9f935cde40c64d181067f728ebb276ddcde
 vector
 -
 queue
