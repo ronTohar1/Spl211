@@ -89,7 +89,6 @@ void Tree::addChild(const Tree &child) {
         this->children[i]=this->children[i-1];
         this->children[i-1]=temp;
     }
-
 }
 
 int Tree::getRank() const {

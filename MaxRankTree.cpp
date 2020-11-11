@@ -66,5 +66,7 @@ void MaxRankTree::addChildrenToQueue(std::queue<const Tree *> &tempQueue,std::qu
 
 }
 
-
+MaxRankTree * MaxRankTree::clone() const {
+    return new MaxRankTree(*this);
+}
 
