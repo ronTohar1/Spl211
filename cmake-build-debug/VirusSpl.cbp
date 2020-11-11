@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug"/>
+				<Option working_dir="/home/spl211/CLionProjects/VirusSpl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug"/>
+				<Option working_dir="/home/spl211/CLionProjects/VirusSpl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug"/>
+				<Option working_dir="/home/spl211/CLionProjects/VirusSpl/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="VirusSpl">
-				<Option output="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/VirusSpl" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug"/>
+				<Option output="/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/VirusSpl" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/spl211/CLionProjects/VirusSpl/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -54,15 +54,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 VirusSpl"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 VirusSpl"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="VirusSpl/fast">
-				<Option output="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/VirusSpl" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug"/>
+				<Option output="/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/VirusSpl" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/spl211/CLionProjects/VirusSpl/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -77,56 +77,56 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 VirusSpl/fast"/>
-					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 VirusSpl/fast"/>
+					<CompileFile command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j2 -f &quot;/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Agent.cpp">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/Agent.cpp">
 			<Option target="VirusSpl"/>
 		</Unit>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Agent.h">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/Agent.h">
 			<Option target="VirusSpl"/>
 		</Unit>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/ContactTracer.cpp">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/ContactTracer.cpp">
 			<Option target="VirusSpl"/>
 		</Unit>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/CycleTree.cpp">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/CycleTree.cpp">
 			<Option target="VirusSpl"/>
 		</Unit>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Graph.cpp">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/Graph.cpp">
 			<Option target="VirusSpl"/>
 		</Unit>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Graph.h">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/Graph.h">
 			<Option target="VirusSpl"/>
 		</Unit>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/MaxRankTree.cpp">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/MaxRankTree.cpp">
 			<Option target="VirusSpl"/>
 		</Unit>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/RootTree.cpp">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/RootTree.cpp">
 			<Option target="VirusSpl"/>
 		</Unit>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Session.cpp">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/Session.cpp">
 			<Option target="VirusSpl"/>
 		</Unit>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Session.h">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/Session.h">
 			<Option target="VirusSpl"/>
 		</Unit>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Tree.cpp">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/Tree.cpp">
 			<Option target="VirusSpl"/>
 		</Unit>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Tree.h">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/Tree.h">
 			<Option target="VirusSpl"/>
 		</Unit>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Virus.cpp">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/Virus.cpp">
 			<Option target="VirusSpl"/>
 		</Unit>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/main.cpp">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/main.cpp">
 			<Option target="VirusSpl"/>
 		</Unit>
-		<Unit filename="/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/CMakeLists.txt">
+		<Unit filename="/home/spl211/CLionProjects/VirusSpl/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

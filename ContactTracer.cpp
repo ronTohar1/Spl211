@@ -25,6 +25,3 @@ void ContactTracer::act(Session &session) {
     }
 }
 
-ContactTracer::ContactTracer() {
-
-}

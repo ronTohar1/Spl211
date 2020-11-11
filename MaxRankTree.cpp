@@ -9,7 +9,6 @@ using namespace std;
 MaxRankTree::MaxRankTree(int rootLabel):Tree(rootLabel) {}
 
 int MaxRankTree::traceTree() {
-
     int maxRankVertex= this->maxRankTreeTrace();
     return maxRankVertex;
 }
@@ -17,42 +16,54 @@ int MaxRankTree::traceTree() {
 
 
 int MaxRankTree::getMaxRankNode() {
-    vector<int> &ranks=getRanks();
-    vector<Tree*> children=this->getChildren();
-    int highestRankNode=children[0]->getRoot();
+     queue<const Tree*>* treeQueue=getTreeQueue();
 
-    if(this->getRank()==0)
-        return highestRankNode;
+     const Tree* maxTree=treeQueue->front();
+     treeQueue->pop();
+     int maxNodeIndex=maxTree->getRoot();
+     int maxNodeRank=maxTree->getRank();
 
-    int highestRankChild=this->getMaxRankChild();
-    if(ranks[highestRankChild]>ranks[highestRankNode])
-        return highestRankChild;
-
-    return highestRankNode;
+     //Finding the max Ranked node.
+     while(!treeQueue->empty()){
+         maxTree=treeQueue->front();
+         if(maxNodeRank<maxTree->getRank()){
+             maxNodeIndex=maxTree->getRoot();
+             maxNodeRank=maxTree->getRank();
+         }
+     }
+     delete treeQueue;
+     return maxNodeIndex;
 }
 
-int MaxRankTree::getMaxRankChild() {
-    vector<int> &ranks=getRanks();
-    vector<Tree*> children=this->getChildren();
-    int highestRankChild=(children[0])->traceTree();
 
-    int highestRankNode=highestRankChild;
-
-    for (int i = 1; i < children.size(); ++i) {
-
-        int currHighestRank=children[i]->getRoot();
-
-        if(ranks[currHighestRank]>ranks[highestRankNode])
-            highestRankNode = currHighestRank;
-
-    }
-
-    return highestRankNode;
-}
 
 int MaxRankTree::maxRankTreeTrace() {
-    int nodeIndex=getMaxRankNode();
+    int nodeIndex=getMaxRankNode().getRoot();
     return nodeIndex;
+}
+
+//Returns a queue ordered by an InOrder traversal of the tre.
+ std::queue<const Tree*>* MaxRankTree::getTreeQueue() {
+    queue<const Tree*>* tree= new queue<const Tree*>();
+    queue<const Tree*> tempNodes;
+    tempNodes.push(this);
+    addChildrenToQueue(tempNodes,*tree);
+    return tree;
+
+}
+
+void MaxRankTree::addChildrenToQueue(std::queue<const Tree *> &tempQueue,std::queue<const Tree *> &treeQueue) {
+    while(!tempQueue.empty()){
+        const Tree* nextTree=tempQueue.front();
+        tempQueue.pop();
+        treeQueue.push(nextTree);
+        //Adding the tree neighbours to the queue.
+        const vector<Tree*> children=nextTree->getChildren();
+        for (int i = 0; i < children.size(); ++i) {
+            tempQueue.push(children[i]);
+        }
+    }
+
 }
 
 

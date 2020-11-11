@@ -19,15 +19,12 @@ private:
     int node;
     std::vector<Tree*> children;
 
-    static Tree& getNewTree(Session session,int rootLabel);
+    static Tree* getNewTree(Session session,int rootLabel);
     void createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,Session session);
-    void setRanks(std::vector<int>* ranks,Tree* tree);
 
 protected:
-    int numOfNodes;
-    std::vector<int>* ranks;
-    std::vector<int>& getRanks() const;
 
+    int numOfNodes;
 };
 
 class CycleTree: public Tree{
@@ -44,8 +41,9 @@ public:
     virtual int traceTree();
 private:
     int maxRankTreeTrace();
+    std::queue<const Tree*>* getTreeQueue();
     int getMaxRankNode();
-    int getMaxRankChild();
+    void addChildrenToQueue(std::queue<const Tree *> &tempQueue,std::queue<const Tree*> &treeQueue)
 };
 
 class RootTree: public Tree{
