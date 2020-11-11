@@ -126,3 +126,9 @@ const Graph &Session::getGraph() const {
 int Session::getCurrCycle() const {
     return currCycle;
 }
+
+bool Session::isInfectionQueueEmpty() const {
+    return infectionQueue.empty();
+
+}
+

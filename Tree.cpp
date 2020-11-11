@@ -31,7 +31,7 @@ Tree* Tree::createTree(const Session &session, int rootLabel) {
 
 }
 
-void Tree::createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,Session session) {
+void Tree::createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,const Session &session) {
     queue<int>* neighboursOfRoot=g.getNeighbors(this->node);
     queue<int> notVisitedNeighbours;
 
@@ -63,7 +63,7 @@ void Tree::createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,
 
 
 
- Tree* Tree::getNewTree(const Session session,int rootLabel) {
+ Tree* Tree::getNewTree(const Session &session,int rootLabel) {
     TreeType type=session.getTreeType();
     if(type==Cycle)
         return (new CycleTree(rootLabel,session.getCurrCycle()));

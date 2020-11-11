@@ -3,47 +3,58 @@
 
 CMakeFiles/VirusSpl.dir/Agent.cpp.o: ../Agent.cpp
 CMakeFiles/VirusSpl.dir/Agent.cpp.o: ../Agent.h
+CMakeFiles/VirusSpl.dir/Agent.cpp.o: ../Graph.h
 CMakeFiles/VirusSpl.dir/Agent.cpp.o: ../Session.h
+CMakeFiles/VirusSpl.dir/Agent.cpp.o: ../json.hpp
 
 CMakeFiles/VirusSpl.dir/ContactTracer.cpp.o: ../Agent.h
 CMakeFiles/VirusSpl.dir/ContactTracer.cpp.o: ../ContactTracer.cpp
+CMakeFiles/VirusSpl.dir/ContactTracer.cpp.o: ../Graph.h
 CMakeFiles/VirusSpl.dir/ContactTracer.cpp.o: ../Session.h
 CMakeFiles/VirusSpl.dir/ContactTracer.cpp.o: ../Tree.h
+CMakeFiles/VirusSpl.dir/ContactTracer.cpp.o: ../json.hpp
 
-CMakeFiles/VirusSpl.dir/CycleTree.cpp.o: ../Agent.h
 CMakeFiles/VirusSpl.dir/CycleTree.cpp.o: ../CycleTree.cpp
+CMakeFiles/VirusSpl.dir/CycleTree.cpp.o: ../Graph.h
 CMakeFiles/VirusSpl.dir/CycleTree.cpp.o: ../Session.h
 CMakeFiles/VirusSpl.dir/CycleTree.cpp.o: ../Tree.h
+CMakeFiles/VirusSpl.dir/CycleTree.cpp.o: ../json.hpp
 
 CMakeFiles/VirusSpl.dir/Graph.cpp.o: ../Graph.cpp
 CMakeFiles/VirusSpl.dir/Graph.cpp.o: ../Graph.h
 
-CMakeFiles/VirusSpl.dir/MaxRankTree.cpp.o: ../Agent.h
+CMakeFiles/VirusSpl.dir/MaxRankTree.cpp.o: ../Graph.h
 CMakeFiles/VirusSpl.dir/MaxRankTree.cpp.o: ../MaxRankTree.cpp
 CMakeFiles/VirusSpl.dir/MaxRankTree.cpp.o: ../Session.h
 CMakeFiles/VirusSpl.dir/MaxRankTree.cpp.o: ../Tree.h
+CMakeFiles/VirusSpl.dir/MaxRankTree.cpp.o: ../json.hpp
 
-CMakeFiles/VirusSpl.dir/RootTree.cpp.o: ../Agent.h
+CMakeFiles/VirusSpl.dir/RootTree.cpp.o: ../Graph.h
 CMakeFiles/VirusSpl.dir/RootTree.cpp.o: ../RootTree.cpp
 CMakeFiles/VirusSpl.dir/RootTree.cpp.o: ../Session.h
 CMakeFiles/VirusSpl.dir/RootTree.cpp.o: ../Tree.h
+CMakeFiles/VirusSpl.dir/RootTree.cpp.o: ../json.hpp
 
 CMakeFiles/VirusSpl.dir/Session.cpp.o: ../Agent.h
+CMakeFiles/VirusSpl.dir/Session.cpp.o: ../Graph.h
 CMakeFiles/VirusSpl.dir/Session.cpp.o: ../Session.cpp
 CMakeFiles/VirusSpl.dir/Session.cpp.o: ../Session.h
 CMakeFiles/VirusSpl.dir/Session.cpp.o: ../json.hpp
 
-CMakeFiles/VirusSpl.dir/Tree.cpp.o: ../Agent.h
 CMakeFiles/VirusSpl.dir/Tree.cpp.o: ../Graph.h
 CMakeFiles/VirusSpl.dir/Tree.cpp.o: ../Session.h
 CMakeFiles/VirusSpl.dir/Tree.cpp.o: ../Tree.cpp
 CMakeFiles/VirusSpl.dir/Tree.cpp.o: ../Tree.h
+CMakeFiles/VirusSpl.dir/Tree.cpp.o: ../json.hpp
 
 CMakeFiles/VirusSpl.dir/Virus.cpp.o: ../Agent.h
+CMakeFiles/VirusSpl.dir/Virus.cpp.o: ../Graph.h
 CMakeFiles/VirusSpl.dir/Virus.cpp.o: ../Session.h
 CMakeFiles/VirusSpl.dir/Virus.cpp.o: ../Virus.cpp
+CMakeFiles/VirusSpl.dir/Virus.cpp.o: ../json.hpp
 
-CMakeFiles/VirusSpl.dir/main.cpp.o: ../Agent.h
+CMakeFiles/VirusSpl.dir/main.cpp.o: ../Graph.h
 CMakeFiles/VirusSpl.dir/main.cpp.o: ../Session.h
+CMakeFiles/VirusSpl.dir/main.cpp.o: ../json.hpp
 CMakeFiles/VirusSpl.dir/main.cpp.o: ../main.cpp
 

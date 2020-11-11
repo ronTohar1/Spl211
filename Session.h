@@ -34,6 +34,7 @@ public:
     void isolateNode(int nodeInd);
     const Graph& getGraph() const;
     int getCurrCycle() const;
+    bool isInfectionQueueEmpty() const;
 
 private:
     Graph g;

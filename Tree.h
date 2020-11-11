@@ -20,8 +20,8 @@ private:
     int node;
     std::vector<Tree*> children;
 
-    static Tree* getNewTree(Session session,int rootLabel);
-    void createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,Session session);
+    static Tree* getNewTree(const Session &session,int rootLabel);
+    void createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,const Session& session);
 
 protected:
 

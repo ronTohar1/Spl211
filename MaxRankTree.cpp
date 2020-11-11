@@ -26,6 +26,7 @@ int MaxRankTree::getMaxRankNode() {
      //Finding the max Ranked node.
      while(!treeQueue->empty()){
          maxTree=treeQueue->front();
+         treeQueue->pop();
          if(maxNodeRank<maxTree->getRank()){
              maxNodeIndex=maxTree->getRoot();
              maxNodeRank=maxTree->getRank();
