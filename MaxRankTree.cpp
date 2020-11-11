@@ -38,7 +38,7 @@ int MaxRankTree::getMaxRankNode() {
 
 
 int MaxRankTree::maxRankTreeTrace() {
-    int nodeIndex=getMaxRankNode().getRoot();
+    int nodeIndex=getMaxRankNode();
     return nodeIndex;
 }
 

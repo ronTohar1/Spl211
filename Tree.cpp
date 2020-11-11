@@ -8,7 +8,7 @@
 #include "Session.h"
 using namespace std;
 
-Tree::Tree(int rootLabel):node(rootLabel),numOfNodes(0), ranks(new std::vector<int>()) {}
+Tree::Tree(int rootLabel):node(rootLabel),numOfNodes(0) {}
 
 
 Tree* Tree::createTree(const Session &session, int rootLabel) {
@@ -74,21 +74,11 @@ void Tree::createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,
 
 }
 
-//Adding in a sorted way. not needed if we recieve the nodes by order. need to check
+//Adding a child to the children array. adding it to the last place.
+//Assuming the rootLabel of the input tree is bigger than all of the other children.
 void Tree::addChild(const Tree &child) {
-    Tree* childTree=&child;
-    int nodeToInsert=child.node;
-    int indexToInsert=0;
-    while(indexToInsert < this->children.size() && this->children[indexToInsert]->node>nodeToInsert){
-        indexToInsert++;
-    }
-    //why do we get *const* reference if we need to insert a *not const* pointer??
-    this->children.push_back();
-    for (int i = this->children.size()-1; i >indexToInsert; --i) {
-        Tree* temp=this->children[i];
-        this->children[i]=this->children[i-1];
-        this->children[i-1]=temp;
-    }
+    Tree* childTree=child.clone();
+    this->children.push_back(childTree);
 }
 
 int Tree::getRank() const {
@@ -101,7 +91,6 @@ const vector<Tree*> Tree::getChildren() const {return this->children;}
 
 Tree::~Tree() {
 
-    delete ranks;
     for (int i = 0; i < children.size(); ++i) {
         delete(children[i]);
     }

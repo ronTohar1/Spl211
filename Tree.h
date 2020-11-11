@@ -46,7 +46,7 @@ private:
     int maxRankTreeTrace();
     std::queue<const Tree*>* getTreeQueue();
     int getMaxRankNode();
-    void addChildrenToQueue(std::queue<const Tree *> &tempQueue,std::queue<const Tree*> &treeQueue)
+    void addChildrenToQueue(std::queue<const Tree *> &tempQueue,std::queue<const Tree*> &treeQueue);
 };
 
 class RootTree: public Tree{
