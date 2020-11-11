@@ -55,5 +55,7 @@ int MaxRankTree::maxRankTreeTrace() {
     return nodeIndex;
 }
 
-
+MaxRankTree * MaxRankTree::clone() const {
+    return new MaxRankTree(*this);
+}
 

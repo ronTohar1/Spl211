@@ -22,3 +22,7 @@ int CycleTree::traceTree() {
     }
     return this->getRoot();
 }
+
+CycleTree * CycleTree::clone() const {
+    return new CycleTree(*this);
+}
