@@ -48,7 +48,7 @@ bool Graph::areThereActiveConnectedComponents() const {
                 return true;
         }
     }
-    return true;
+    return false;
 }
 
 bool Graph::visitNode(int nodeInd, std::vector<bool>& visitedNodes) const {
@@ -57,7 +57,7 @@ bool Graph::visitNode(int nodeInd, std::vector<bool>& visitedNodes) const {
         return true;
     for (int otherNodeInd = 0; otherNodeInd < numOfNodes; otherNodeInd++){
         if (edgeExists(nodeInd, otherNodeInd) && !visitedNodes[otherNodeInd]){
-            if (!visitNode(otherNodeInd, visitedNodes))
+            if (visitNode(otherNodeInd, visitedNodes))
                 return true;
         }
     }
