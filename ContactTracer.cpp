@@ -20,3 +20,7 @@ void ContactTracer::act(Session &session) {
         session.isolateNode(nodeToIsolate);
     }
 }
+
+ContactTracer::ContactTracer() {
+
+}
