@@ -32,14 +32,15 @@ public:
     void updateInfected(int newInfectedNodeInd);
     void addCarrier(int nodeInd);
     void isolateNode(int nodeInd);
-    int getCurrCycle() const;
     const Graph& getGraph() const;
+    int getCurrCycle() const;
 
 private:
     Graph g;
     TreeType treeType;
     std::vector<Agent*> agents;
     std::queue<int> infectionQueue;
+    int currCycle;
 
     bool terminationConditionsSatisfied() const;
     void addAgents(const nlohmann::json& jsonSessionData);

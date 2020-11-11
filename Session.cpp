@@ -5,7 +5,7 @@
 #include <fstream>
 
 
-Session::Session(const std::string &path) {
+Session::Session(const std::string &path) : currCycle(0) {
     nlohmann::json* jsonSessionData = getJsonDataFromFile(path);
     setGraph(Graph((*jsonSessionData)["graph"]));
     addAgents((*jsonSessionData)["agents"]);
@@ -48,6 +48,7 @@ void Session::simulate(){
         for (int i = 0; i < cyclesStartingNumOfAgents; i++) {
             agents[i]->act(*this);
         }
+        currCycle = currCycle + 1;
     }
     writeOutput();
 };
@@ -120,4 +121,8 @@ void Session::writeOutput() const {
 
 const Graph &Session::getGraph() const {
     return this->g;
+}
+
+int Session::getCurrCycle() const {
+    return currCycle;
 }

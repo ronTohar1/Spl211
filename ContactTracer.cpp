@@ -5,6 +5,10 @@
 #include "Agent.h"
 
 
+ContactTracer::ContactTracer() : Agent() {
+
+}
+
 ContactTracer * ContactTracer::clone() const {
 
     return new ContactTracer();
