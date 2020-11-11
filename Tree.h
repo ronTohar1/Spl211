@@ -21,11 +21,8 @@ private:
     std::vector<Tree*> children;
 
     static Tree* getNewTree(const Session &session,int rootLabel);
-    void createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,const Session& session);
-
-protected:
-
-    int numOfNodes;
+    static void popTreeBFS(std::queue<Tree *> &trees, std::vector<bool> &visitedNodes, const Graph &g,
+    const Session &session);
 };
 
 class CycleTree: public Tree{

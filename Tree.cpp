@@ -8,57 +8,43 @@
 #include "Session.h"
 using namespace std;
 
-Tree::Tree(int rootLabel):node(rootLabel),numOfNodes(0) {}
+Tree::Tree(int rootLabel):node(rootLabel) {}
 
 
 Tree* Tree::createTree(const Session &session, int rootLabel) {
     //Using bfs algorithm to create a tree
     const Graph &g = session.getGraph();
-    Tree *myTree = getNewTree(session, rootLabel);
     int numOfNodes = g.getNumOfNodes();
-    myTree->numOfNodes = numOfNodes;
 
-    vector<bool> *visitedVertices = new vector<bool>();
-    for (int i = 0; i < numOfNodes; ++i) {
-        visitedVertices->push_back(false);
+    vector<bool> visitedNodes(numOfNodes, false);
+    queue<Tree *> trees;
+
+    Tree *rootTree = getNewTree(session, rootLabel);
+    trees.push(rootTree);
+    visitedNodes[rootLabel] = true;
+    while (!trees.empty()){
+        popTreeBFS(trees, visitedNodes, g, session);
     }
-    (*visitedVertices)[rootLabel] = true;
-    myTree->createChildrenTree(visitedVertices, g, session);
-
-
-    delete visitedVertices;
-    return myTree;
-
+    return rootTree;
 }
 
-void Tree::createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,const Session &session) {
-    queue<int>* neighboursOfRoot=g.getNeighbors(this->node);
-    queue<int> notVisitedNeighbours;
-
-    //taking all of the unvisited neighbours of the root node.
-    while(!neighboursOfRoot->empty()){
-        int neighbour=neighboursOfRoot->front();
-        neighboursOfRoot->pop();
-        if(!(*visitedVertices)[neighbour])
-            notVisitedNeighbours.push(neighbour);
+void Tree::popTreeBFS(std::queue<Tree *> &trees, std::vector<bool> &visitedNodes, const Graph &g,
+                      const Session &session) {
+    Tree *tree = trees.front();
+    trees.pop();
+    // Tree *currentSonTree;
+    int numOfNodes = g.getNumOfNodes();
+    for (int otherNode = 0; otherNode < numOfNodes; otherNode++){
+        if (g.edgeExists(tree->node, otherNode) && !visitedNodes[otherNode]){
+            // currentSonTree = getNewTree(session, otherNode);
+            tree->addChild(*getNewTree(session, otherNode));
+            // trees.push(currentSonTree);
+            visitedNodes[otherNode] = true;
+        }
     }
-
-    //Going through all of the neighbours that were not visited yet and adding them to this tree's children vector.
-    while(!notVisitedNeighbours.empty()) {
-        const int vertex = notVisitedNeighbours.front();
-        notVisitedNeighbours.pop();
-        (*visitedVertices)[vertex] = true;
-        Tree *childTreeRef=getNewTree(session, vertex);
-        this->addChild(*childTreeRef);
+    for (Tree *currentSon : tree->children){
+        trees.push(currentSon);
     }
-
-    //Creating children tree to each one of this tree's children.
-    for (int i = 0; i < this->children.size(); ++i) {
-        Tree* childTree=this->children[i];
-        childTree->createChildrenTree(visitedVertices,g,session);
-    }
-
-    delete neighboursOfRoot;
 }
 
 

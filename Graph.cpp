@@ -97,12 +97,12 @@ std::vector<int> *Graph::getAllInfected() const {
     return infectedNodes;
 }
 
-std::queue<int>* Graph::getNeighbors(int NodeInd) const {
-     std::queue<int>* neighbours= new std::queue<int>();
+std::vector<int>* Graph::getNeighbors(int NodeInd) const {
+     std::vector<int>* neighbours= new std::vector<int>();
     for (int i = 0; i < numOfNodes; ++i) {
         if(NodeInd!=i)
             if(edgeExists(NodeInd,i))
-                neighbours->push(i);
+                neighbours->push_back(i);
     }
     return neighbours;
 }
