@@ -8,7 +8,7 @@
 #include "Session.h"
 using namespace std;
 
-Tree::Tree(int rootLabel):node(rootLabel),numOfNodes(0) {}
+Tree::Tree(int rootLabel):node(rootLabel),numOfNodes(0), ranks(new std::vector<int>()) {}
 
 
 Tree* Tree::createTree(const Session &session, int rootLabel) {
@@ -91,7 +91,7 @@ void Tree::addChild(const Tree &child) {
     const Tree* childTree=&child;
     int nodeToInsert=child.node;
     int indexToInsert=0;
-    while(this->children[indexToInsert]->node>nodeToInsert){
+    while(indexToInsert < this->children.size() && this->children[indexToInsert]->node>nodeToInsert){
         indexToInsert++;
     }
     //why do we get *const* reference if we need to insert a *not const* pointer??
