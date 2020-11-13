@@ -6,16 +6,58 @@
 
 #IncludeRegexTransform: 
 
+/home/spl211/CLionProjects/VirusSpl/Agent.cpp
+Agent.h
+/home/spl211/CLionProjects/VirusSpl/Agent.h
+
+/home/spl211/CLionProjects/VirusSpl/Agent.h
+vector
+-
+Session.h
+/home/spl211/CLionProjects/VirusSpl/Session.h
+
+/home/spl211/CLionProjects/VirusSpl/ContactTracer.cpp
+Tree.h
+/home/spl211/CLionProjects/VirusSpl/Tree.h
+Agent.h
+/home/spl211/CLionProjects/VirusSpl/Agent.h
+
 /home/spl211/CLionProjects/VirusSpl/CycleTree.cpp
 Tree.h
 /home/spl211/CLionProjects/VirusSpl/Tree.h
 vector
 /home/spl211/CLionProjects/VirusSpl/vector
 
+/home/spl211/CLionProjects/VirusSpl/Graph.cpp
+Graph.h
+/home/spl211/CLionProjects/VirusSpl/Graph.h
+
 /home/spl211/CLionProjects/VirusSpl/Graph.h
 vector
 -
 queue
+-
+
+/home/spl211/CLionProjects/VirusSpl/MaxRankTree.cpp
+Tree.h
+/home/spl211/CLionProjects/VirusSpl/Tree.h
+vector
+/home/spl211/CLionProjects/VirusSpl/vector
+
+/home/spl211/CLionProjects/VirusSpl/RootTree.cpp
+Tree.h
+/home/spl211/CLionProjects/VirusSpl/Tree.h
+
+/home/spl211/CLionProjects/VirusSpl/Session.cpp
+Session.h
+/home/spl211/CLionProjects/VirusSpl/Session.h
+vector
+-
+Agent.h
+/home/spl211/CLionProjects/VirusSpl/Agent.h
+json.hpp
+/home/spl211/CLionProjects/VirusSpl/json.hpp
+fstream
 -
 
 /home/spl211/CLionProjects/VirusSpl/Session.h
@@ -32,11 +74,29 @@ map
 json.hpp
 /home/spl211/CLionProjects/VirusSpl/json.hpp
 
+/home/spl211/CLionProjects/VirusSpl/Tree.cpp
+Tree.h
+/home/spl211/CLionProjects/VirusSpl/Tree.h
+Graph.h
+/home/spl211/CLionProjects/VirusSpl/Graph.h
+vector
+/home/spl211/CLionProjects/VirusSpl/vector
+Session.h
+/home/spl211/CLionProjects/VirusSpl/Session.h
+
 /home/spl211/CLionProjects/VirusSpl/Tree.h
 vector
 -
 Session.h
 /home/spl211/CLionProjects/VirusSpl/Session.h
+
+/home/spl211/CLionProjects/VirusSpl/Virus.cpp
+vector
+-
+Session.h
+/home/spl211/CLionProjects/VirusSpl/Session.h
+Agent.h
+/home/spl211/CLionProjects/VirusSpl/Agent.h
 
 /home/spl211/CLionProjects/VirusSpl/json.hpp
 algorithm
@@ -371,4 +431,10 @@ limits
 -
 type_traits
 -
+
+/home/spl211/CLionProjects/VirusSpl/main.cpp
+iostream
+-
+Session.h
+/home/spl211/CLionProjects/VirusSpl/Session.h
 

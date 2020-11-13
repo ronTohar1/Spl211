@@ -23,8 +23,9 @@ public:
     const std::vector<std::vector<int>> &getEdges() const;
     std::vector<int> *getAllInfected() const;
     //Methods added for Tree class
-    std::queue<int>* getNeighbors(int NodeInd) const;//Returns the neighbours of a node (SORTED!!).
+    std::vector<int>* getNeighbors(int nodeInt) const;//Returns the neighbours of a node (SORTED!!).
     int getNumOfNodes() const;
+    bool edgeExists(int nodeInd1, int nodeInd2) const;
 
 private:
     std::vector<std::vector<int>> edges;
@@ -34,7 +35,6 @@ private:
 //    std::vector<int> activeConnectedComponentsNumOfInfected;
 
     bool visitNode(int nodeInd, std::vector<bool>& visitedNodes) const;
-    bool edgeExists(int nodeInd1, int nodeInd2) const;
     void removeDirectedEdge(int nodeIndFrom, int nodeIndTo);
 };
 

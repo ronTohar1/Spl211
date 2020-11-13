@@ -7,25 +7,26 @@ class Session;
 
 class Tree{
 public:
-    Tree(int rootLabel);
+    Tree(int rootLabel);//Constructor
+    Tree(Tree &&tree);//Move Constructor
+    Tree(const Tree &tree);//Move Constructor
+    const Tree& operator=(const Tree& tree);//Assignment Operator
+    const Tree& operator=(Tree &&tree);//Move Assignment Operator
+    virtual ~Tree();//Destructor
+    virtual Tree * clone() const = 0;
     void addChild(const Tree& child);
     static Tree* createTree(const Session& session, int rootLabel);
     virtual int traceTree()=0;
     const std::vector<Tree*> getChildren() const;
     int getRoot() const;
     int getRank() const;
-    virtual ~Tree();
-    virtual Tree * clone() const = 0;
 private:
     int node;
     std::vector<Tree*> children;
 
     static Tree* getNewTree(const Session &session,int rootLabel);
-    void createChildrenTree(std::vector<bool>* visitedVertices,const Graph &g,const Session& session);
-
-protected:
-
-    int numOfNodes;
+    static void popTreeBFS(std::queue<Tree *> &trees, std::vector<bool> &visitedNodes, const Graph &g,
+    const Session &session);
 };
 
 class CycleTree: public Tree{

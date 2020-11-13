@@ -9,19 +9,12 @@ using namespace std;
 CycleTree::CycleTree(int rootLabel, int currCycle):Tree(rootLabel),currCycle(currCycle) {}
 
 int CycleTree::traceTree() {
-        Tree *currTree=this;
-        bool flag=false;
 
-    for (int i = 0; i < currCycle && !flag; ++i) {
-        if(currTree->getRank()>0) {
-            currTree=(currTree->getChildren())[0];
-        }
-        else
-        {
-            flag=true;
-        }
+    Tree *currentTree = this;
+    for (int i = 0; i < currCycle && currentTree->getRank() > 0; ++i) {
+        currentTree = currentTree->getChildren()[0];
     }
-    return currTree->getRoot();
+    return currentTree->getRoot();
 }
 
 CycleTree * CycleTree::clone() const {
