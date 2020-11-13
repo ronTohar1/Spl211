@@ -17,12 +17,16 @@ ContactTracer * ContactTracer::clone() const {
 
 void ContactTracer::act(Session &session) {
 
-    if(!session.isInfectionQueueEmpty()) {
+    //Isolating the most recently-infected node.
+    if(!session.isInfectionQueueEmpty()) //Checking if there is a node that was recently infected.
+    {
         int infectedNode = session.dequeueInfected();
-
         Tree *tree = Tree::createTree(session, infectedNode);
         int nodeToIsolate = tree->traceTree();
         session.isolateNode(nodeToIsolate);
+
+        if(tree!=nullptr)
+            delete tree;
     }
 }
 

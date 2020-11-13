@@ -8,22 +8,29 @@ class Session;
 class Tree{
 public:
     Tree(int rootLabel);//Constructor
-    Tree(Tree &&tree);//Move Constructor
-    Tree(const Tree &tree);//Move Constructor
+    //Rule of 5 implementation --------------------------------
+    Tree(Tree &&tree);//Move Copy Constructor
+    Tree(const Tree &tree);//Copy  Constructor
     const Tree& operator=(const Tree& tree);//Assignment Operator
     const Tree& operator=(Tree &&tree);//Move Assignment Operator
     virtual ~Tree();//Destructor
-    virtual Tree * clone() const = 0;
+    //---------------------------------------------------------
     void addChild(const Tree& child);
-    static Tree* createTree(const Session& session, int rootLabel);
-    virtual int traceTree()=0;
     const std::vector<Tree*> getChildren() const;
     int getRoot() const;
     int getRank() const;
+    static Tree* createTree(const Session& session, int rootLabel);
+    virtual Tree * clone() const = 0;
+    virtual int traceTree()=0;
+
+
 private:
     int node;
     std::vector<Tree*> children;
 
+    void addChild( Tree* child);
+    void copyChildren(const Tree& other);
+    void deleteChildren();
     static Tree* getNewTree(const Session &session,int rootLabel);
     static void popTreeBFS(std::queue<Tree *> &trees, std::vector<bool> &visitedNodes, const Graph &g,
     const Session &session);
@@ -45,9 +52,10 @@ public:
     virtual MaxRankTree * clone() const;
 private:
     int maxRankTreeTrace();
-    std::queue<const Tree*>* getTreeQueue();
     int getMaxRankNode();
     void addChildrenToQueue(std::queue<const Tree *> &tempQueue,std::queue<const Tree*> &treeQueue);
+    std::queue<const Tree*>* getTreeQueue();
+
 };
 
 class RootTree: public Tree{

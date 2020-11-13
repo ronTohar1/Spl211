@@ -14,19 +14,10 @@ Tree::Tree(int rootLabel):node(rootLabel),children() {}
 const Tree &Tree::operator=(const Tree &tree) {
     if(this!=&tree) {
         //Deleting all of my children.
-        for (int i = 0; i < children.size(); ++i) {
-
-            if (children[i]) {
-                delete children[i];
-                children[i] = nullptr;
-            }
-        }
+        deleteChildren();
         //Copying the tree's node and it's children.
         this->node=tree.node;
-        for (int i = 0; i < tree.children.size(); ++i) {
-            const Tree &treeToAdd=*tree.children[i];
-            addChild(treeToAdd);
-        }
+        copyChildren(tree);
 
         return *this;
     }
@@ -35,16 +26,10 @@ const Tree &Tree::operator=(const Tree &tree) {
 //Move Assignment operator
 const Tree &Tree::operator=(Tree &&tree) {
     if(this!=&tree){
-        this->node=other.node;
+        this->node=tree.node;
         //Deleting all of my children.
-        for (int i = 0; i < children.size(); ++i) {
-
-            if (children[i]) {
-                delete children[i];
-                children[i] = nullptr;
-            }
-        }
-        this->children=tree.children;//Moving the children/
+        deleteChildren();
+        this->children=tree.children;//Moving the children
         tree.children.clear();//Clearing the other tree children so this tree's children won't be deleted.
     }
     return *this;
@@ -57,18 +42,17 @@ Tree::Tree(Tree &&tree): children(std::move(tree.children)),node(tree.node) {
 
 //Copy Constructor
 Tree::Tree(const Tree &tree):node(tree.node),children() {
-    for (int i = 0; i < tree.children.size(); ++i) {
-
-
-    }
-
+    copyChildren(tree);
 }
 
 //Destructor
 Tree::~Tree() {
 
     for (int i = 0; i < children.size(); ++i) {
-        delete(children[i]);
+        if(children[i]){
+            delete(children[i]);
+            children[i]=nullptr;
+        }
     }
 
 }
@@ -84,35 +68,45 @@ Tree* Tree::createTree(const Session &session, int rootLabel) {
     Tree *rootTree = getNewTree(session, rootLabel);
     trees.push(rootTree);
     visitedNodes[rootLabel] = true;
+
+    //Implementing the BFS algorithm
     while (!trees.empty()){
         popTreeBFS(trees, visitedNodes, g, session);
     }
+
     return rootTree;
 }
 
+//BFS algorithm
 void Tree::popTreeBFS(std::queue<Tree *> &trees, std::vector<bool> &visitedNodes, const Graph &g,
                       const Session &session) {
+
     Tree *tree = trees.front();
     trees.pop();
-    // Tree *currentSonTree;
     int numOfNodes = g.getNumOfNodes();
+
+    //Adding each not visited neighbour to the children vector.
     for (int otherNode = 0; otherNode < numOfNodes; otherNode++){
         if (g.edgeExists(tree->node, otherNode) && !visitedNodes[otherNode]){
-            // currentSonTree = getNewTree(session, otherNode);
-            tree->addChild(*getNewTree(session, otherNode));
-            // trees.push(currentSonTree);
+
+            Tree * treeToAdd=getNewTree(session, otherNode);
+            tree->addChild(treeToAdd);//Adding the new tree directly without cloning.
             visitedNodes[otherNode] = true;
         }
     }
+
+    //Adding the children to the queueu in order to implement the BFS algorithm.
     for (Tree *currentSon : tree->children){
         trees.push(currentSon);
     }
 }
 
 
-
+//Method returns a new tree according to the Tree type in the session.
  Tree* Tree::getNewTree(const Session &session,int rootLabel) {
+
     TreeType type=session.getTreeType();
+
     if(type==Cycle)
         return (new CycleTree(rootLabel,session.getCurrCycle()));
     else if(type==MaxRank)
@@ -128,6 +122,10 @@ void Tree::addChild(const Tree &child) {
     Tree* childTree=child.clone();
     this->children.push_back(childTree);
 }
+//Overloading addChild-> adding a tree directly to the children vector without cloning.
+void Tree::addChild( Tree *child) {
+    this->children.push_back(child);
+}
 
 int Tree::getRank() const {
     return children.size();
@@ -136,6 +134,30 @@ int Tree::getRank() const {
 int Tree::getRoot() const {return this->node;}
 
 const vector<Tree*> Tree::getChildren() const {return this->children;}
+
+//Deep copying the children of the other tree.
+void Tree::copyChildren(const Tree &other) {
+    if(this!=&other){
+        for (int i = 0; i < other.children.size(); ++i) {
+            addChild(*other.children[i]);
+        }
+    }
+}
+
+//Deletes all of the children of the tree.
+void Tree::deleteChildren() {
+
+    for (int i = 0; i < children.size(); ++i) {
+
+        if (children[i]) {
+            delete children[i];
+            children[i] = nullptr;
+        }
+        children.clear();
+    }
+}
+
+
 
 
 
