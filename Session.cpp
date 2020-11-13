@@ -41,6 +41,52 @@ void Session::addAgent(const nlohmann::json &jsonAgentData) {
     agents.push_back(newAgent);
 }
 
+// rule of 5
+
+Session::Session(const Session &other) : g(other.g), treeType(other.treeType), agents(),
+        infectionQueue(other.infectionQueue), currCycle(other.currCycle) {
+    copyAgents(other);
+}
+
+Session & Session::operator=(const Session &other){
+    if (this != &other){
+        g = other.g;
+        treeType = other.treeType;
+        deleteAgents();
+        agents.clear();
+        copyAgents(other);
+        infectionQueue = other.infectionQueue;
+        currCycle = other.currCycle;
+    }
+    return *this;
+}
+
+Session::~Session() {
+    deleteAgents();
+}
+
+Session::Session(const Session &&other) : g(std::move(other.g)), treeType(std::move(other.treeType)),
+        agents(std::move(other.agents)), infectionQueue(std::move(other.infectionQueue)),
+        currCycle(std::move(other.currCycle)) {
+
+}
+
+void Session::copyAgents(const Session &other) {
+    for (Agent *agent : other.agents)
+        agents.push_back(agent->clone());
+}
+
+void Session::deleteAgents() {
+    for (Agent *agent : agents){
+        if (agent != nullptr){
+            delete agent;
+            agent = nullptr;
+        }
+    }
+}
+
+
+
 void Session::simulate(){
     int cyclesStartingNumOfAgents;
     while (!terminationConditionsSatisfied()){

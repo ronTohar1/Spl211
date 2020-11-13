@@ -36,6 +36,12 @@ public:
     int getCurrCycle() const;
     bool isInfectionQueueEmpty() const;
 
+    // rule of 5:
+    Session(const Session &other);
+    Session & operator=(const Session &other);
+    virtual ~Session();
+    Session(const Session &&other);
+
 private:
     Graph g;
     TreeType treeType;
@@ -50,6 +56,10 @@ private:
     static nlohmann::json* getJsonDataFromFile(const std::string& path);
 
     void writeOutput() const;
+
+    void deleteAgents();
+
+    void copyAgents(const Session &other);
 };
 
 #endif
