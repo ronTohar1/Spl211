@@ -60,7 +60,6 @@ Session & Session::operator=(const Session &other){
     }
     return *this;
 }
-
 Session::~Session() {
     deleteAgents();
 }
