@@ -29,7 +29,7 @@ public:
     virtual void act(Session& session);
 private:
     const int nodeInd;
-    bool infectedNode;
+    bool infectedNode; // true iff this Virus already infected its node
 };
 
 #endif

@@ -8,7 +8,7 @@ Virus::Virus(int nodeInd):nodeInd(nodeInd), infectedNode(false) {
 }
 
 Virus * Virus::clone() const {
-    return new Virus(nodeInd);
+    return new Virus(*this); // using the copy constructor
 }
 
 void Virus::act(Session &session) {
@@ -17,10 +17,10 @@ void Virus::act(Session &session) {
         session.updateInfected(nodeInd); // update session that our Node is infected
         infectedNode = true;
     }
-    // then spread to another node:
+    // then spread to another node if there is a node to spread to:
     int nodeToSpreadTo = session.getNodeToSpreadTo(nodeInd);
-    if (nodeToSpreadTo != -1) { // if -1 then there is no Node to spread to
+    if (nodeToSpreadTo != -1) { // if -1 then there is no node to spread to
         session.addAgent(Virus(nodeToSpreadTo));
-        session.addCarrier(nodeToSpreadTo);
+        session.addCarrier(nodeToSpreadTo); // updating the Session that the node is a new carrier
     }
 }

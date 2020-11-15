@@ -1,10 +1,15 @@
 #include <iostream>
 #include "Session.h"
 
-int main() {
+using namespace std;
 
-    Session session("../config4.json");
-    session.simulate();
-    std::cout << "Hello, World!" << std::endl;
+int main(int argc, char** argv){
+    if(argc != 2){
+        cout << "usage cTrace <config_path>" << endl;
+        return 0;
+    }
+     Session sess(argv[1]);
+//    Session sess("../config4.json");
+    sess.simulate();
     return 0;
 }
