@@ -68,10 +68,10 @@ RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211
+CMAKE_SOURCE_DIR = /home/spl211/CLionProjects/VirusSpl
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug
+CMAKE_BINARY_DIR = /home/spl211/CLionProjects/VirusSpl/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -100,9 +100,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles /home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -143,275 +143,275 @@ VirusSpl/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/build
 .PHONY : VirusSpl/fast
 
-Agent.o: Agent.cpp.o
+src/Agent.o: src/Agent.cpp.o
 
-.PHONY : Agent.o
-
-# target to build an object file
-Agent.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Agent.cpp.o
-.PHONY : Agent.cpp.o
-
-Agent.i: Agent.cpp.i
-
-.PHONY : Agent.i
-
-# target to preprocess a source file
-Agent.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Agent.cpp.i
-.PHONY : Agent.cpp.i
-
-Agent.s: Agent.cpp.s
-
-.PHONY : Agent.s
-
-# target to generate assembly for a file
-Agent.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Agent.cpp.s
-.PHONY : Agent.cpp.s
-
-ContactTracer.o: ContactTracer.cpp.o
-
-.PHONY : ContactTracer.o
+.PHONY : src/Agent.o
 
 # target to build an object file
-ContactTracer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/ContactTracer.cpp.o
-.PHONY : ContactTracer.cpp.o
+src/Agent.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Agent.cpp.o
+.PHONY : src/Agent.cpp.o
 
-ContactTracer.i: ContactTracer.cpp.i
+src/Agent.i: src/Agent.cpp.i
 
-.PHONY : ContactTracer.i
+.PHONY : src/Agent.i
 
 # target to preprocess a source file
-ContactTracer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/ContactTracer.cpp.i
-.PHONY : ContactTracer.cpp.i
+src/Agent.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Agent.cpp.i
+.PHONY : src/Agent.cpp.i
 
-ContactTracer.s: ContactTracer.cpp.s
+src/Agent.s: src/Agent.cpp.s
 
-.PHONY : ContactTracer.s
+.PHONY : src/Agent.s
 
 # target to generate assembly for a file
-ContactTracer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/ContactTracer.cpp.s
-.PHONY : ContactTracer.cpp.s
+src/Agent.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Agent.cpp.s
+.PHONY : src/Agent.cpp.s
 
-CycleTree.o: CycleTree.cpp.o
+src/ContactTracer.o: src/ContactTracer.cpp.o
 
-.PHONY : CycleTree.o
+.PHONY : src/ContactTracer.o
 
 # target to build an object file
-CycleTree.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/CycleTree.cpp.o
-.PHONY : CycleTree.cpp.o
+src/ContactTracer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.o
+.PHONY : src/ContactTracer.cpp.o
 
-CycleTree.i: CycleTree.cpp.i
+src/ContactTracer.i: src/ContactTracer.cpp.i
 
-.PHONY : CycleTree.i
+.PHONY : src/ContactTracer.i
 
 # target to preprocess a source file
-CycleTree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/CycleTree.cpp.i
-.PHONY : CycleTree.cpp.i
+src/ContactTracer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.i
+.PHONY : src/ContactTracer.cpp.i
 
-CycleTree.s: CycleTree.cpp.s
+src/ContactTracer.s: src/ContactTracer.cpp.s
 
-.PHONY : CycleTree.s
+.PHONY : src/ContactTracer.s
 
 # target to generate assembly for a file
-CycleTree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/CycleTree.cpp.s
-.PHONY : CycleTree.cpp.s
+src/ContactTracer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.s
+.PHONY : src/ContactTracer.cpp.s
 
-Graph.o: Graph.cpp.o
+src/CycleTree.o: src/CycleTree.cpp.o
 
-.PHONY : Graph.o
+.PHONY : src/CycleTree.o
 
 # target to build an object file
-Graph.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Graph.cpp.o
-.PHONY : Graph.cpp.o
+src/CycleTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.o
+.PHONY : src/CycleTree.cpp.o
 
-Graph.i: Graph.cpp.i
+src/CycleTree.i: src/CycleTree.cpp.i
 
-.PHONY : Graph.i
+.PHONY : src/CycleTree.i
 
 # target to preprocess a source file
-Graph.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Graph.cpp.i
-.PHONY : Graph.cpp.i
+src/CycleTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.i
+.PHONY : src/CycleTree.cpp.i
 
-Graph.s: Graph.cpp.s
+src/CycleTree.s: src/CycleTree.cpp.s
 
-.PHONY : Graph.s
+.PHONY : src/CycleTree.s
 
 # target to generate assembly for a file
-Graph.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Graph.cpp.s
-.PHONY : Graph.cpp.s
+src/CycleTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.s
+.PHONY : src/CycleTree.cpp.s
 
-MaxRankTree.o: MaxRankTree.cpp.o
+src/Graph.o: src/Graph.cpp.o
 
-.PHONY : MaxRankTree.o
+.PHONY : src/Graph.o
 
 # target to build an object file
-MaxRankTree.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/MaxRankTree.cpp.o
-.PHONY : MaxRankTree.cpp.o
+src/Graph.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Graph.cpp.o
+.PHONY : src/Graph.cpp.o
 
-MaxRankTree.i: MaxRankTree.cpp.i
+src/Graph.i: src/Graph.cpp.i
 
-.PHONY : MaxRankTree.i
+.PHONY : src/Graph.i
 
 # target to preprocess a source file
-MaxRankTree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/MaxRankTree.cpp.i
-.PHONY : MaxRankTree.cpp.i
+src/Graph.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Graph.cpp.i
+.PHONY : src/Graph.cpp.i
 
-MaxRankTree.s: MaxRankTree.cpp.s
+src/Graph.s: src/Graph.cpp.s
 
-.PHONY : MaxRankTree.s
+.PHONY : src/Graph.s
 
 # target to generate assembly for a file
-MaxRankTree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/MaxRankTree.cpp.s
-.PHONY : MaxRankTree.cpp.s
+src/Graph.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Graph.cpp.s
+.PHONY : src/Graph.cpp.s
 
-RootTree.o: RootTree.cpp.o
+src/MaxRankTree.o: src/MaxRankTree.cpp.o
 
-.PHONY : RootTree.o
+.PHONY : src/MaxRankTree.o
 
 # target to build an object file
-RootTree.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/RootTree.cpp.o
-.PHONY : RootTree.cpp.o
+src/MaxRankTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.o
+.PHONY : src/MaxRankTree.cpp.o
 
-RootTree.i: RootTree.cpp.i
+src/MaxRankTree.i: src/MaxRankTree.cpp.i
 
-.PHONY : RootTree.i
+.PHONY : src/MaxRankTree.i
 
 # target to preprocess a source file
-RootTree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/RootTree.cpp.i
-.PHONY : RootTree.cpp.i
+src/MaxRankTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.i
+.PHONY : src/MaxRankTree.cpp.i
 
-RootTree.s: RootTree.cpp.s
+src/MaxRankTree.s: src/MaxRankTree.cpp.s
 
-.PHONY : RootTree.s
+.PHONY : src/MaxRankTree.s
 
 # target to generate assembly for a file
-RootTree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/RootTree.cpp.s
-.PHONY : RootTree.cpp.s
+src/MaxRankTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.s
+.PHONY : src/MaxRankTree.cpp.s
 
-Session.o: Session.cpp.o
+src/RootTree.o: src/RootTree.cpp.o
 
-.PHONY : Session.o
+.PHONY : src/RootTree.o
 
 # target to build an object file
-Session.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Session.cpp.o
-.PHONY : Session.cpp.o
+src/RootTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/RootTree.cpp.o
+.PHONY : src/RootTree.cpp.o
 
-Session.i: Session.cpp.i
+src/RootTree.i: src/RootTree.cpp.i
 
-.PHONY : Session.i
+.PHONY : src/RootTree.i
 
 # target to preprocess a source file
-Session.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Session.cpp.i
-.PHONY : Session.cpp.i
+src/RootTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/RootTree.cpp.i
+.PHONY : src/RootTree.cpp.i
 
-Session.s: Session.cpp.s
+src/RootTree.s: src/RootTree.cpp.s
 
-.PHONY : Session.s
+.PHONY : src/RootTree.s
 
 # target to generate assembly for a file
-Session.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Session.cpp.s
-.PHONY : Session.cpp.s
+src/RootTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/RootTree.cpp.s
+.PHONY : src/RootTree.cpp.s
 
-Tree.o: Tree.cpp.o
+src/Session.o: src/Session.cpp.o
 
-.PHONY : Tree.o
+.PHONY : src/Session.o
 
 # target to build an object file
-Tree.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Tree.cpp.o
-.PHONY : Tree.cpp.o
+src/Session.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Session.cpp.o
+.PHONY : src/Session.cpp.o
 
-Tree.i: Tree.cpp.i
+src/Session.i: src/Session.cpp.i
 
-.PHONY : Tree.i
+.PHONY : src/Session.i
 
 # target to preprocess a source file
-Tree.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Tree.cpp.i
-.PHONY : Tree.cpp.i
+src/Session.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Session.cpp.i
+.PHONY : src/Session.cpp.i
 
-Tree.s: Tree.cpp.s
+src/Session.s: src/Session.cpp.s
 
-.PHONY : Tree.s
+.PHONY : src/Session.s
 
 # target to generate assembly for a file
-Tree.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Tree.cpp.s
-.PHONY : Tree.cpp.s
+src/Session.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Session.cpp.s
+.PHONY : src/Session.cpp.s
 
-Virus.o: Virus.cpp.o
+src/Tree.o: src/Tree.cpp.o
 
-.PHONY : Virus.o
+.PHONY : src/Tree.o
 
 # target to build an object file
-Virus.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Virus.cpp.o
-.PHONY : Virus.cpp.o
+src/Tree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Tree.cpp.o
+.PHONY : src/Tree.cpp.o
 
-Virus.i: Virus.cpp.i
+src/Tree.i: src/Tree.cpp.i
 
-.PHONY : Virus.i
+.PHONY : src/Tree.i
 
 # target to preprocess a source file
-Virus.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Virus.cpp.i
-.PHONY : Virus.cpp.i
+src/Tree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Tree.cpp.i
+.PHONY : src/Tree.cpp.i
 
-Virus.s: Virus.cpp.s
+src/Tree.s: src/Tree.cpp.s
 
-.PHONY : Virus.s
+.PHONY : src/Tree.s
 
 # target to generate assembly for a file
-Virus.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/Virus.cpp.s
-.PHONY : Virus.cpp.s
+src/Tree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Tree.cpp.s
+.PHONY : src/Tree.cpp.s
 
-main.o: main.cpp.o
+src/Virus.o: src/Virus.cpp.o
 
-.PHONY : main.o
+.PHONY : src/Virus.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/Virus.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Virus.cpp.o
+.PHONY : src/Virus.cpp.o
 
-main.i: main.cpp.i
+src/Virus.i: src/Virus.cpp.i
 
-.PHONY : main.i
+.PHONY : src/Virus.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/Virus.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Virus.cpp.i
+.PHONY : src/Virus.cpp.i
 
-main.s: main.cpp.s
+src/Virus.s: src/Virus.cpp.s
 
-.PHONY : main.s
+.PHONY : src/Virus.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/Virus.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/Virus.cpp.s
+.PHONY : src/Virus.cpp.s
+
+src/main.o: src/main.cpp.o
+
+.PHONY : src/main.o
+
+# target to build an object file
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
+
+src/main.i: src/main.cpp.i
+
+.PHONY : src/main.i
+
+# target to preprocess a source file
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
+
+src/main.s: src/main.cpp.s
+
+.PHONY : src/main.s
+
+# target to generate assembly for a file
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VirusSpl.dir/build.make CMakeFiles/VirusSpl.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
 # Help Target
 help:
@@ -422,36 +422,36 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... VirusSpl"
-	@echo "... Agent.o"
-	@echo "... Agent.i"
-	@echo "... Agent.s"
-	@echo "... ContactTracer.o"
-	@echo "... ContactTracer.i"
-	@echo "... ContactTracer.s"
-	@echo "... CycleTree.o"
-	@echo "... CycleTree.i"
-	@echo "... CycleTree.s"
-	@echo "... Graph.o"
-	@echo "... Graph.i"
-	@echo "... Graph.s"
-	@echo "... MaxRankTree.o"
-	@echo "... MaxRankTree.i"
-	@echo "... MaxRankTree.s"
-	@echo "... RootTree.o"
-	@echo "... RootTree.i"
-	@echo "... RootTree.s"
-	@echo "... Session.o"
-	@echo "... Session.i"
-	@echo "... Session.s"
-	@echo "... Tree.o"
-	@echo "... Tree.i"
-	@echo "... Tree.s"
-	@echo "... Virus.o"
-	@echo "... Virus.i"
-	@echo "... Virus.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... src/Agent.o"
+	@echo "... src/Agent.i"
+	@echo "... src/Agent.s"
+	@echo "... src/ContactTracer.o"
+	@echo "... src/ContactTracer.i"
+	@echo "... src/ContactTracer.s"
+	@echo "... src/CycleTree.o"
+	@echo "... src/CycleTree.i"
+	@echo "... src/CycleTree.s"
+	@echo "... src/Graph.o"
+	@echo "... src/Graph.i"
+	@echo "... src/Graph.s"
+	@echo "... src/MaxRankTree.o"
+	@echo "... src/MaxRankTree.i"
+	@echo "... src/MaxRankTree.s"
+	@echo "... src/RootTree.o"
+	@echo "... src/RootTree.i"
+	@echo "... src/RootTree.s"
+	@echo "... src/Session.o"
+	@echo "... src/Session.i"
+	@echo "... src/Session.s"
+	@echo "... src/Tree.o"
+	@echo "... src/Tree.i"
+	@echo "... src/Tree.s"
+	@echo "... src/Virus.o"
+	@echo "... src/Virus.i"
+	@echo "... src/Virus.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

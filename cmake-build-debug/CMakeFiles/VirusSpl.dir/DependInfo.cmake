@@ -4,16 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Agent.cpp" "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/VirusSpl.dir/Agent.cpp.o"
-  "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/ContactTracer.cpp" "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/VirusSpl.dir/ContactTracer.cpp.o"
-  "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/CycleTree.cpp" "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/VirusSpl.dir/CycleTree.cpp.o"
-  "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Graph.cpp" "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/VirusSpl.dir/Graph.cpp.o"
-  "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/MaxRankTree.cpp" "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/VirusSpl.dir/MaxRankTree.cpp.o"
-  "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/RootTree.cpp" "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/VirusSpl.dir/RootTree.cpp.o"
-  "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Session.cpp" "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/VirusSpl.dir/Session.cpp.o"
-  "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Tree.cpp" "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/VirusSpl.dir/Tree.cpp.o"
-  "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/Virus.cpp" "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/VirusSpl.dir/Virus.cpp.o"
-  "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/main.cpp" "/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/VirusSpl.dir/main.cpp.o"
+  "/home/spl211/CLionProjects/VirusSpl/src/Agent.cpp" "/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/VirusSpl.dir/src/Agent.cpp.o"
+  "/home/spl211/CLionProjects/VirusSpl/src/ContactTracer.cpp" "/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.o"
+  "/home/spl211/CLionProjects/VirusSpl/src/CycleTree.cpp" "/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.o"
+  "/home/spl211/CLionProjects/VirusSpl/src/Graph.cpp" "/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/VirusSpl.dir/src/Graph.cpp.o"
+  "/home/spl211/CLionProjects/VirusSpl/src/MaxRankTree.cpp" "/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.o"
+  "/home/spl211/CLionProjects/VirusSpl/src/RootTree.cpp" "/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/VirusSpl.dir/src/RootTree.cpp.o"
+  "/home/spl211/CLionProjects/VirusSpl/src/Session.cpp" "/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/VirusSpl.dir/src/Session.cpp.o"
+  "/home/spl211/CLionProjects/VirusSpl/src/Tree.cpp" "/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/VirusSpl.dir/src/Tree.cpp.o"
+  "/home/spl211/CLionProjects/VirusSpl/src/Virus.cpp" "/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/VirusSpl.dir/src/Virus.cpp.o"
+  "/home/spl211/CLionProjects/VirusSpl/src/main.cpp" "/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/VirusSpl.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
