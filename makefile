@@ -13,8 +13,8 @@ bin/main.o: src/main.cpp bin/Session.o
 		g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/main.o src/main.cpp bin/Session.o
 
 #Depends on the source and header files
-bin/Session.o: src/Session.cpp
-		g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/Session.o src/Session.cpp
+bin/Session.o: src/Session.cpp bin/Graph.o bin/Virus.o bin/ContactTracer.o
+		g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/Session.o src/Session.cpp bin/Graph.o bin/Virus.o bin/ContactTracer.o
 
 #Depends on the source and header files
 bin/Virus.o: src/Virus.cpp
