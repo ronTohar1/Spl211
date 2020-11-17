@@ -11,8 +11,8 @@ public:
     //Rule of 5 implementation --------------------------------
     Tree(Tree &&tree);//Move Copy Constructor
     Tree(const Tree &tree);//Copy  Constructor
-    const Tree& operator=(const Tree& tree);//Assignment Operator
-    const Tree& operator=(Tree &&tree);//Move Assignment Operator
+     Tree& operator=(const Tree& tree);//Assignment Operator
+    Tree& operator=(Tree &&tree);//Move Assignment Operator
     virtual ~Tree();//Destructor
     //---------------------------------------------------------
     void addChild(const Tree& child);

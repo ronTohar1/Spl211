@@ -6,7 +6,11 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/include/Graph.h
+=======
+/home/spl211/CLionProjects/VirusSpl/include/Graph.h
+>>>>>>> b3de7ac434e524e413221bb8eae0c1b73512f85e
 vector
 -
 queue
@@ -24,9 +28,15 @@ Graph.h
 map
 -
 ../json.hpp
+<<<<<<< HEAD
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/json.hpp
 
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/json.hpp
+=======
+/home/spl211/CLionProjects/VirusSpl/json.hpp
+
+/home/spl211/CLionProjects/VirusSpl/json.hpp
+>>>>>>> b3de7ac434e524e413221bb8eae0c1b73512f85e
 algorithm
 -
 cassert
@@ -360,9 +370,21 @@ limits
 type_traits
 -
 
+<<<<<<< HEAD
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/main.cpp
 iostream
 -
 ../include/Session.h
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/include/Session.h
+=======
+/home/spl211/CLionProjects/VirusSpl/src/Graph.cpp
+../include/Graph.h
+/home/spl211/CLionProjects/VirusSpl/include/Graph.h
+
+/home/spl211/CLionProjects/VirusSpl/src/main.cpp
+iostream
+-
+../include/Session.h
+/home/spl211/CLionProjects/VirusSpl/include/Session.h
+>>>>>>> b3de7ac434e524e413221bb8eae0c1b73512f85e
 

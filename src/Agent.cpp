@@ -4,10 +4,3 @@
 Agent::Agent() {
 
 }
-
-//Agent::~Agent() {
-//
-//}
-//
-//
-//

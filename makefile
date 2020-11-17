@@ -1,28 +1,28 @@
 
 #All Targets
-all: finishedFile
+all: bin/cTrace
 
-finishedFile: bin/main.o
-		@echo 'building target: bin/finishedFile'
+bin/cTrace: bin/main.o bin/Session.o bin/Graph.o bin/Agent.o bin/Virus.o bin/ContactTracer.o  bin/Tree.o bin/CycleTree.o bin/MaxRankTree.o bin/RootTree.o
+		@echo 'building target: bin/cTrace'
 		@echo 'Invoking: C++ Linker'
-		g++ -o bin/finishedFile bin/main.o
-		@echo 'Finished Building Target: bin/finishedFile'
+		g++ -o bin/cTrace bin/main.o bin/Session.o bin/Graph.o bin/Agent.o bin/Virus.o bin/ContactTracer.o  bin/Tree.o bin/CycleTree.o bin/MaxRankTree.o bin/RootTree.o
+		@echo 'Finished Building Target: bin/cTrace'
 
 #Depends on the source and header files
-bin/main.o: src/main.cpp bin/Session.o
-		g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/main.o src/main.cpp bin/Session.o
+bin/main.o: src/main.cpp
+		g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/main.o src/main.cpp
 
 #Depends on the source and header files
-bin/Session.o: src/Session.cpp bin/Graph.o bin/Virus.o bin/ContactTracer.o
-		g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/Session.o src/Session.cpp bin/Graph.o bin/Virus.o bin/ContactTracer.o
+bin/Session.o: src/Session.cpp
+		g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/Session.o src/Session.cpp
 
 #Depends on the source and header files
 bin/Virus.o: src/Virus.cpp
 		g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/Virus.o src/Virus.cpp
 
 #Depends on the source and header files
-bin/ContactTracer.o: src/ContactTracer.cpp bin/Agent.o
-		g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/ContactTracer.o src/ContactTracer.cpp bin/Agent.o
+bin/ContactTracer.o: src/ContactTracer.cpp
+		g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/ContactTracer.o src/ContactTracer.cpp
 
 #Depends on the source and header files
 bin/MaxRankTree.o: src/MaxRankTree.cpp
@@ -45,8 +45,8 @@ bin/Agent.o: src/Agent.cpp
 		g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/Agent.o src/Agent.cpp
 
 #Depends on the source and header files
-bin/Tree.o: src/Tree.cpp bin/Graph.o bin/Session.o
-		g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/Tree.o src/Tree.cpp bin/Graph.o bin/Session.o
+bin/Tree.o: src/Tree.cpp
+		g++ -g -Wall -Weffc++ -std=c++11 -c -Iinclude -o bin/Tree.o src/Tree.cpp
 
 
 

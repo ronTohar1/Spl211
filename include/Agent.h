@@ -30,7 +30,6 @@ public:
 
     Virus * clone() const;
     virtual void act(Session& session);
-    virtual ~Virus();
 private:
     const int nodeInd;
     bool infectedNode; // true iff this Virus already infected its node

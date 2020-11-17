@@ -25,6 +25,4 @@ void Virus::act(Session &session) {
     }
 }
 
-Virus::~Virus() {
 
-}
