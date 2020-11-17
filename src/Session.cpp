@@ -78,7 +78,7 @@ bool Session::terminationConditionsSatisfied() const {
 // Writes the state of this Session to its output file
 void Session::writeOutput() const {
     // creating the necessary objects for writing the output:
-    std::ofstream outputFile("../output.json");
+    std::ofstream outputFile("output.json");
     nlohmann::json jsonOutput;
     // saving the data of this Session in the json object:
     jsonOutput["graph"] = g.getEdges();

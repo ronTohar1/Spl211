@@ -11,20 +11,20 @@ using namespace std;
 Tree::Tree(int rootLabel):node(rootLabel),children() {}
 
 //Assignment operator
-const Tree &Tree::operator=(const Tree &tree) {
+Tree &Tree::operator=(const Tree &tree) {
     if(this!=&tree) {
         //Deleting all of my children.
         deleteChildren();
         //Copying the tree's node and it's children.
         this->node=tree.node;
         copyChildren(tree);
-
-        return *this;
     }
+    return *this;
+
 }
 
 //Move Assignment operator
-const Tree &Tree::operator=(Tree &&tree) {
+Tree &Tree::operator=(Tree &&tree) {
     if(this!=&tree){
         this->node=tree.node;
         //Deleting all of my children.
@@ -37,7 +37,7 @@ const Tree &Tree::operator=(Tree &&tree) {
 }
 
 //Move Constructor
-Tree::Tree(Tree &&tree): children(std::move(tree.children)),node(tree.node) {
+Tree::Tree(Tree &&tree):node(tree.node), children(std::move(tree.children)) {
 }
 
 //Copy Constructor
@@ -48,7 +48,7 @@ Tree::Tree(const Tree &tree):node(tree.node),children() {
 //Destructor
 Tree::~Tree() {
 
-    for (int i = 0; i < children.size(); ++i) {
+    for (unsigned i = 0; i < children.size(); ++i) {
         if(children[i]){
             delete(children[i]);
             children[i]=nullptr;
@@ -111,7 +111,7 @@ void Tree::popTreeBFS(std::queue<Tree *> &trees, std::vector<bool> &visitedNodes
         return (new CycleTree(rootLabel,session.getCurrCycle()));
     else if(type==MaxRank)
         return (new MaxRankTree(rootLabel));
-    else if(type==Root)
+    else
         return (new RootTree(rootLabel));
 
 }
@@ -138,7 +138,7 @@ const vector<Tree*> Tree::getChildren() const {return this->children;}
 //Deep copying the children of the other tree.
 void Tree::copyChildren(const Tree &other) {
     if(this!=&other){
-        for (int i = 0; i < other.children.size(); ++i) {
+        for (unsigned i = 0;i < other.children.size(); ++i) {
             addChild(*other.children[i]);
         }
     }
@@ -147,7 +147,7 @@ void Tree::copyChildren(const Tree &other) {
 //Deletes all of the children of the tree.
 void Tree::deleteChildren() {
 
-    for (int i = 0; i < children.size(); ++i) {
+    for (unsigned i = 0; i < children.size(); ++i) {
 
         if (children[i]) {
             delete children[i];

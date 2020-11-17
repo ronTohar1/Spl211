@@ -60,7 +60,7 @@ void MaxRankTree::addChildrenToQueue(std::queue<const Tree *> &tempQueue,std::qu
         treeQueue.push(nextTree);
         //Adding the tree neighbours to the queue.
         const vector<Tree*> children=nextTree->getChildren();
-        for (int i = 0; i < children.size(); ++i) {
+        for (unsigned i = 0; i < children.size(); ++i) {
             tempQueue.push(children[i]);
         }
     }

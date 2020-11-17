@@ -5,9 +5,7 @@ Agent::Agent() {
 
 }
 
-Agent::~Agent() {
 
-}
 
 
 
