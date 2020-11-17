@@ -21,7 +21,7 @@ Session::Session(const std::string &path) : g(), treeType(), agents(), infection
 nlohmann::json* Session::getJsonDataFromFile(const std::string &path) {
     std::ifstream fileData(path); // reads the data from the file
     nlohmann::json* jsonData = new nlohmann::json();
-    (*jsonData) << fileData; // saving the data in the json object
+    fileData >> (*jsonData); // saving the data in the json object
     return jsonData;
 }
 

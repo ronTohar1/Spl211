@@ -6,7 +6,7 @@
 
 class Agent{
 public:
-    Agent();
+    Agent() = default;
 
     virtual Agent * clone() const=0;
     virtual void act(Session& session)=0;
