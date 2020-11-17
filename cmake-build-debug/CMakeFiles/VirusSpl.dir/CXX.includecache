@@ -6,19 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/spl211/CLionProjects/VirusSpl/include/Agent.h
-vector
--
-Session.h
-/home/spl211/CLionProjects/VirusSpl/include/Session.h
-
-/home/spl211/CLionProjects/VirusSpl/include/Graph.h
+/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/include/Graph.h
 vector
 -
 queue
 -
 
-/home/spl211/CLionProjects/VirusSpl/include/Session.h
+/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/include/Session.h
 vector
 -
 string
@@ -26,19 +20,13 @@ string
 queue
 -
 Graph.h
-/home/spl211/CLionProjects/VirusSpl/include/Graph.h
+/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/include/Graph.h
 map
 -
 ../json.hpp
-/home/spl211/CLionProjects/VirusSpl/json.hpp
+/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/json.hpp
 
-/home/spl211/CLionProjects/VirusSpl/include/Tree.h
-vector
--
-Session.h
-/home/spl211/CLionProjects/VirusSpl/include/Session.h
-
-/home/spl211/CLionProjects/VirusSpl/json.hpp
+/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/json.hpp
 algorithm
 -
 cassert
@@ -372,33 +360,9 @@ limits
 type_traits
 -
 
-/home/spl211/CLionProjects/VirusSpl/src/Agent.cpp
-../include/Agent.h
-/home/spl211/CLionProjects/VirusSpl/include/Agent.h
-
-/home/spl211/CLionProjects/VirusSpl/src/ContactTracer.cpp
-../include/Tree.h
-/home/spl211/CLionProjects/VirusSpl/include/Tree.h
-../include/Agent.h
-/home/spl211/CLionProjects/VirusSpl/include/Agent.h
-
-/home/spl211/CLionProjects/VirusSpl/src/Session.cpp
-../include/Session.h
-/home/spl211/CLionProjects/VirusSpl/include/Session.h
-vector
--
-../include/Agent.h
-/home/spl211/CLionProjects/VirusSpl/include/Agent.h
-../json.hpp
-/home/spl211/CLionProjects/VirusSpl/json.hpp
-fstream
--
-
-/home/spl211/CLionProjects/VirusSpl/src/Virus.cpp
-vector
+/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/main.cpp
+iostream
 -
 ../include/Session.h
-/home/spl211/CLionProjects/VirusSpl/include/Session.h
-../include/Agent.h
-/home/spl211/CLionProjects/VirusSpl/include/Agent.h
+/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/include/Session.h
 

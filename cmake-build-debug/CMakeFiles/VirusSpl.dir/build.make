@@ -63,10 +63,10 @@ RM = /snap/clion/129/bin/cmake/linux/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/spl211/CLionProjects/VirusSpl
+CMAKE_SOURCE_DIR = /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/spl211/CLionProjects/VirusSpl/cmake-build-debug
+CMAKE_BINARY_DIR = /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/VirusSpl.dir/depend.make
@@ -79,133 +79,133 @@ include CMakeFiles/VirusSpl.dir/flags.make
 
 CMakeFiles/VirusSpl.dir/src/main.cpp.o: CMakeFiles/VirusSpl.dir/flags.make
 CMakeFiles/VirusSpl.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/VirusSpl.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/main.cpp.o -c /home/spl211/CLionProjects/VirusSpl/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/VirusSpl.dir/src/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/main.cpp.o -c /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/main.cpp
 
 CMakeFiles/VirusSpl.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VirusSpl.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/VirusSpl/src/main.cpp > CMakeFiles/VirusSpl.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/main.cpp > CMakeFiles/VirusSpl.dir/src/main.cpp.i
 
 CMakeFiles/VirusSpl.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VirusSpl.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/VirusSpl/src/main.cpp -o CMakeFiles/VirusSpl.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/main.cpp -o CMakeFiles/VirusSpl.dir/src/main.cpp.s
 
 CMakeFiles/VirusSpl.dir/src/Session.cpp.o: CMakeFiles/VirusSpl.dir/flags.make
 CMakeFiles/VirusSpl.dir/src/Session.cpp.o: ../src/Session.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VirusSpl.dir/src/Session.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/Session.cpp.o -c /home/spl211/CLionProjects/VirusSpl/src/Session.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/VirusSpl.dir/src/Session.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/Session.cpp.o -c /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Session.cpp
 
 CMakeFiles/VirusSpl.dir/src/Session.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VirusSpl.dir/src/Session.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/VirusSpl/src/Session.cpp > CMakeFiles/VirusSpl.dir/src/Session.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Session.cpp > CMakeFiles/VirusSpl.dir/src/Session.cpp.i
 
 CMakeFiles/VirusSpl.dir/src/Session.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VirusSpl.dir/src/Session.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/VirusSpl/src/Session.cpp -o CMakeFiles/VirusSpl.dir/src/Session.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Session.cpp -o CMakeFiles/VirusSpl.dir/src/Session.cpp.s
 
 CMakeFiles/VirusSpl.dir/src/Agent.cpp.o: CMakeFiles/VirusSpl.dir/flags.make
 CMakeFiles/VirusSpl.dir/src/Agent.cpp.o: ../src/Agent.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VirusSpl.dir/src/Agent.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/Agent.cpp.o -c /home/spl211/CLionProjects/VirusSpl/src/Agent.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VirusSpl.dir/src/Agent.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/Agent.cpp.o -c /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Agent.cpp
 
 CMakeFiles/VirusSpl.dir/src/Agent.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VirusSpl.dir/src/Agent.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/VirusSpl/src/Agent.cpp > CMakeFiles/VirusSpl.dir/src/Agent.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Agent.cpp > CMakeFiles/VirusSpl.dir/src/Agent.cpp.i
 
 CMakeFiles/VirusSpl.dir/src/Agent.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VirusSpl.dir/src/Agent.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/VirusSpl/src/Agent.cpp -o CMakeFiles/VirusSpl.dir/src/Agent.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Agent.cpp -o CMakeFiles/VirusSpl.dir/src/Agent.cpp.s
 
 CMakeFiles/VirusSpl.dir/src/Virus.cpp.o: CMakeFiles/VirusSpl.dir/flags.make
 CMakeFiles/VirusSpl.dir/src/Virus.cpp.o: ../src/Virus.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VirusSpl.dir/src/Virus.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/Virus.cpp.o -c /home/spl211/CLionProjects/VirusSpl/src/Virus.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VirusSpl.dir/src/Virus.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/Virus.cpp.o -c /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Virus.cpp
 
 CMakeFiles/VirusSpl.dir/src/Virus.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VirusSpl.dir/src/Virus.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/VirusSpl/src/Virus.cpp > CMakeFiles/VirusSpl.dir/src/Virus.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Virus.cpp > CMakeFiles/VirusSpl.dir/src/Virus.cpp.i
 
 CMakeFiles/VirusSpl.dir/src/Virus.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VirusSpl.dir/src/Virus.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/VirusSpl/src/Virus.cpp -o CMakeFiles/VirusSpl.dir/src/Virus.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Virus.cpp -o CMakeFiles/VirusSpl.dir/src/Virus.cpp.s
 
 CMakeFiles/VirusSpl.dir/src/Graph.cpp.o: CMakeFiles/VirusSpl.dir/flags.make
 CMakeFiles/VirusSpl.dir/src/Graph.cpp.o: ../src/Graph.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/VirusSpl.dir/src/Graph.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/Graph.cpp.o -c /home/spl211/CLionProjects/VirusSpl/src/Graph.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/VirusSpl.dir/src/Graph.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/Graph.cpp.o -c /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Graph.cpp
 
 CMakeFiles/VirusSpl.dir/src/Graph.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VirusSpl.dir/src/Graph.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/VirusSpl/src/Graph.cpp > CMakeFiles/VirusSpl.dir/src/Graph.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Graph.cpp > CMakeFiles/VirusSpl.dir/src/Graph.cpp.i
 
 CMakeFiles/VirusSpl.dir/src/Graph.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VirusSpl.dir/src/Graph.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/VirusSpl/src/Graph.cpp -o CMakeFiles/VirusSpl.dir/src/Graph.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Graph.cpp -o CMakeFiles/VirusSpl.dir/src/Graph.cpp.s
 
 CMakeFiles/VirusSpl.dir/src/Tree.cpp.o: CMakeFiles/VirusSpl.dir/flags.make
 CMakeFiles/VirusSpl.dir/src/Tree.cpp.o: ../src/Tree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/VirusSpl.dir/src/Tree.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/Tree.cpp.o -c /home/spl211/CLionProjects/VirusSpl/src/Tree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/VirusSpl.dir/src/Tree.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/Tree.cpp.o -c /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Tree.cpp
 
 CMakeFiles/VirusSpl.dir/src/Tree.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VirusSpl.dir/src/Tree.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/VirusSpl/src/Tree.cpp > CMakeFiles/VirusSpl.dir/src/Tree.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Tree.cpp > CMakeFiles/VirusSpl.dir/src/Tree.cpp.i
 
 CMakeFiles/VirusSpl.dir/src/Tree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VirusSpl.dir/src/Tree.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/VirusSpl/src/Tree.cpp -o CMakeFiles/VirusSpl.dir/src/Tree.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/Tree.cpp -o CMakeFiles/VirusSpl.dir/src/Tree.cpp.s
 
 CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.o: CMakeFiles/VirusSpl.dir/flags.make
 CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.o: ../src/MaxRankTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.o -c /home/spl211/CLionProjects/VirusSpl/src/MaxRankTree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.o -c /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/MaxRankTree.cpp
 
 CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/VirusSpl/src/MaxRankTree.cpp > CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/MaxRankTree.cpp > CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.i
 
 CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/VirusSpl/src/MaxRankTree.cpp -o CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/MaxRankTree.cpp -o CMakeFiles/VirusSpl.dir/src/MaxRankTree.cpp.s
 
 CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.o: CMakeFiles/VirusSpl.dir/flags.make
 CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.o: ../src/CycleTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.o -c /home/spl211/CLionProjects/VirusSpl/src/CycleTree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.o -c /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/CycleTree.cpp
 
 CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/VirusSpl/src/CycleTree.cpp > CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/CycleTree.cpp > CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.i
 
 CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/VirusSpl/src/CycleTree.cpp -o CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/CycleTree.cpp -o CMakeFiles/VirusSpl.dir/src/CycleTree.cpp.s
 
 CMakeFiles/VirusSpl.dir/src/RootTree.cpp.o: CMakeFiles/VirusSpl.dir/flags.make
 CMakeFiles/VirusSpl.dir/src/RootTree.cpp.o: ../src/RootTree.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/VirusSpl.dir/src/RootTree.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/RootTree.cpp.o -c /home/spl211/CLionProjects/VirusSpl/src/RootTree.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/VirusSpl.dir/src/RootTree.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/RootTree.cpp.o -c /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/RootTree.cpp
 
 CMakeFiles/VirusSpl.dir/src/RootTree.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VirusSpl.dir/src/RootTree.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/VirusSpl/src/RootTree.cpp > CMakeFiles/VirusSpl.dir/src/RootTree.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/RootTree.cpp > CMakeFiles/VirusSpl.dir/src/RootTree.cpp.i
 
 CMakeFiles/VirusSpl.dir/src/RootTree.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VirusSpl.dir/src/RootTree.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/VirusSpl/src/RootTree.cpp -o CMakeFiles/VirusSpl.dir/src/RootTree.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/RootTree.cpp -o CMakeFiles/VirusSpl.dir/src/RootTree.cpp.s
 
 CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.o: CMakeFiles/VirusSpl.dir/flags.make
 CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.o: ../src/ContactTracer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.o -c /home/spl211/CLionProjects/VirusSpl/src/ContactTracer.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.o -c /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/ContactTracer.cpp
 
 CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/CLionProjects/VirusSpl/src/ContactTracer.cpp > CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/ContactTracer.cpp > CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.i
 
 CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/CLionProjects/VirusSpl/src/ContactTracer.cpp -o CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/src/ContactTracer.cpp -o CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.s
 
 # Object files for target VirusSpl
 VirusSpl_OBJECTS = \
@@ -235,7 +235,7 @@ VirusSpl: CMakeFiles/VirusSpl.dir/src/RootTree.cpp.o
 VirusSpl: CMakeFiles/VirusSpl.dir/src/ContactTracer.cpp.o
 VirusSpl: CMakeFiles/VirusSpl.dir/build.make
 VirusSpl: CMakeFiles/VirusSpl.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable VirusSpl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable VirusSpl"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VirusSpl.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -248,6 +248,6 @@ CMakeFiles/VirusSpl.dir/clean:
 .PHONY : CMakeFiles/VirusSpl.dir/clean
 
 CMakeFiles/VirusSpl.dir/depend:
-	cd /home/spl211/CLionProjects/VirusSpl/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spl211/CLionProjects/VirusSpl /home/spl211/CLionProjects/VirusSpl /home/spl211/CLionProjects/VirusSpl/cmake-build-debug /home/spl211/CLionProjects/VirusSpl/cmake-build-debug /home/spl211/CLionProjects/VirusSpl/cmake-build-debug/CMakeFiles/VirusSpl.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/cmake-build-debug/CMakeFiles/VirusSpl.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/VirusSpl.dir/depend
 
