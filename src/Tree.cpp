@@ -38,6 +38,7 @@ Tree &Tree::operator=(Tree &&tree) {
 
 //Move Constructor
 Tree::Tree(Tree &&tree):node(tree.node), children(std::move(tree.children)) {
+    tree.children.clear();
 }
 
 //Copy Constructor

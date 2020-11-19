@@ -1,6 +1,10 @@
 
 #include "../include/Graph.h"
 
+// const ints for the state of the nodes in the Graph. The values are sorted by the infection severity:
+const int Graph::NON_CARRIER = 0;
+const int Graph::CARRIER = 1;
+const int Graph::INFECTED = 2;
 
 Graph::Graph(std::vector<std::vector<int>> matrix) : edges(matrix), numOfNodes(matrix.size()),
         nodesInfection(std::vector<int>(matrix.size(), NON_CARRIER)) {
@@ -16,18 +20,13 @@ void Graph::infectNode(int nodeInd) {
     nodesInfection[nodeInd] = INFECTED;
 }
 
-bool Graph::isInfected(int nodeInd) {
-//    const Graph *g = this;
-//    return g->isInfected(nodeInd);
-    return const_cast<const Graph*>(this)->isInfected(nodeInd); // calling the const method that does the same thing
-}
-
 bool Graph::isInfected(int nodeInd) const {
     return nodesInfection[nodeInd] == INFECTED;
 }
 
 bool Graph::isCarrier(int nodeInd) const {
-    return nodesInfection[nodeInd] >= CARRIER; // more than carrier means infected and carrier
+    return nodesInfection[nodeInd] >= CARRIER; // more than carrier means infected and carrier - the values are sorted
+    // by the infection severity
 }
 
 const std::vector<std::vector<int>> &Graph::getEdges() const {

@@ -4,21 +4,15 @@
 #include <vector>
 #include <queue>
 
-// const ints for the state of the nodes in the Graph:
-const int NON_CARRIER = 0;
-const int CARRIER = 1;
-const int INFECTED = 2;
-
 class Graph{
 public:
     Graph(std::vector<std::vector<int>> matrix);
     Graph(); // creates a graph without any nodes or edges
     
     void infectNode(int nodeInd);
-    bool isInfected(int nodeInd);
+    bool isInfected(int nodeInd) const;
 
     bool isCarrier(int nodeInd) const;
-    bool isInfected(int nodeInd) const;
     const std::vector<std::vector<int>> &getEdges() const;
     std::vector<int> *getAllInfected() const;
     int getNumOfNodes() const;
@@ -37,6 +31,11 @@ private:
     int numOfNodes;
     std::vector<int> nodesInfection; // a vector that includes for every node in the Graph if it doesn't have a virus,
     // has a virus but not infected, or infected.
+
+    // static const ints for the state of the nodes in the Graph (defined in the Graph.cpp file):
+    static const int NON_CARRIER;
+    static const int CARRIER;
+    static const int INFECTED;
 
     void removeEdge(int nodeInd1, int nodeInd2);
     void removeDirectedEdge(int nodeIndFrom, int nodeIndTo);

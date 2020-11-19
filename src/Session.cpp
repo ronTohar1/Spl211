@@ -1,7 +1,6 @@
 #include "../include/Session.h"
 #include <vector>
 #include "../include/Agent.h"
-#include "../json.hpp"
 #include <fstream>
 
 
@@ -78,7 +77,7 @@ bool Session::terminationConditionsSatisfied() const {
 // Writes the state of this Session to its output file
 void Session::writeOutput() const {
     // creating the necessary objects for writing the output:
-    std::ofstream outputFile("output.json");
+    std::ofstream outputFile(OUTPUT_FILE);
     nlohmann::json jsonOutput;
     // saving the data of this Session in the json object:
     jsonOutput["graph"] = g.getEdges();
@@ -146,41 +145,67 @@ int Session::getCurrCycle() const {
     return currCycle;
 }
 
-// rule of 5
+// rule of 5 - because the Session class manages memory on the heap
 
+// copy constructor
 Session::Session(const Session &other) : g(other.g), treeType(other.treeType), agents(),
                                          infectionQueue(other.infectionQueue), currCycle(other.currCycle) {
-    copyAgents(other);
+    copyAgents(other); // copies all the agents of other and adds them to this' agents
 }
 
+// copy assignment operator
 Session & Session::operator=(const Session &other){
-    if (this != &other){
+    if (this != &other){ // in this case no change is necessary
         g = other.g;
         treeType = other.treeType;
-        deleteAgents();
+
+        // coping the agents:
+        deleteAgents(); // deletes all of this' agents from the heap
         agents.clear();
-        copyAgents(other);
+        copyAgents(other); // copies all the agents of other and adds them to this' agents
+
         infectionQueue = other.infectionQueue;
         currCycle = other.currCycle;
     }
     return *this;
 }
+
+// destructor
 Session::~Session() {
-    deleteAgents();
+    deleteAgents(); // deletes all of this' agents from the heap
 }
 
-Session::Session(const Session &&other) : g(std::move(other.g)), treeType(std::move(other.treeType)),
+// move constructor
+Session::Session(Session &&other) : g(std::move(other.g)), treeType(std::move(other.treeType)),
                                           agents(std::move(other.agents)),
                                           infectionQueue(std::move(other.infectionQueue)),
                                           currCycle(std::move(other.currCycle)) {
-
+    other.agents.clear(); // clearing the agents of other so other's destructor won't delete them from the heap
 }
 
+// move assignment operator
+Session & Session::operator=(Session &&other) {
+    if (this != &other){
+        g = std::move(other.g);
+        treeType = std::move(other.treeType);
+
+        deleteAgents(); // deletes all of this' agents from the heap
+        agents = std::move(other.agents);
+        other.agents.clear(); // clearing the agents of other so other's destructor won't delete them from the heap
+
+        infectionQueue = std::move(other.infectionQueue);
+        currCycle = std::move(other.currCycle);
+    }
+    return *this;
+}
+
+// a private helper method that copies all the agents of other and adds them to this' agents
 void Session::copyAgents(const Session &other) {
     for (Agent *agent : other.agents)
         agents.push_back(agent->clone());
 }
 
+// a private helper method that deletes all of this' agents from the heap
 void Session::deleteAgents() {
     for (Agent *agent : agents){
         if (agent != nullptr){

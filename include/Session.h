@@ -36,11 +36,12 @@ public:
     const Graph& getGraph() const;
     int getCurrCycle() const;
 
-    // rule of 5:
+    // rule of 5 - because the Session class manages memory on the heap
     Session(const Session &other);
     Session & operator=(const Session &other);
     virtual ~Session();
-    Session(const Session &&other);
+    Session(Session &&other);
+    Session & operator=(Session &&other);
 
 private:
     Graph g;
@@ -48,6 +49,8 @@ private:
     std::vector<Agent*> agents;
     std::queue<int> infectionQueue; // a queue of the new infected nodes, ordered by their infection time
     int currCycle; // the current cycle of the session, starts from 0
+
+    const std::string OUTPUT_FILE = "./output.json";
 
     static nlohmann::json* getJsonDataFromFile(const std::string &path);
     void addAgents(const nlohmann::json &jsonSessionData);
