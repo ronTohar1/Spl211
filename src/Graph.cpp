@@ -62,7 +62,7 @@ int Graph::getNodeToSpreadTo(int fromNodeInd) const {
     // iterating over the nodes in increasing order, so the first node we can spread to will be with the smallest index:
     for (int nodeInd = 0; nodeInd < numOfNodes; nodeInd++){
         // if the current node is a neighbor of the given node and is not a carrier, return it:
-        if (edgeExists(fromNodeInd, nodeInd) == 1 && !isCarrier(nodeInd))
+        if (edgeExists(fromNodeInd, nodeInd) && !isCarrier(nodeInd))
             return nodeInd;
     }
     return -1; // in case there is no Node to spread to
