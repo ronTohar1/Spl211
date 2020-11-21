@@ -29,8 +29,8 @@ Graph.h
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/include/Graph.h
 map
 -
-../json.hpp
-/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/json.hpp
+json.hpp
+/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/include/json.hpp
 
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/include/Tree.h
 vector
@@ -38,7 +38,7 @@ vector
 Session.h
 /home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/include/Session.h
 
-/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/json.hpp
+/home/spl211/Documents/Amit/University/Semester_c/Spl/Assignment1Real/Spl211/include/json.hpp
 algorithm
 -
 cassert

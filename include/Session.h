@@ -6,7 +6,7 @@
 #include <queue>
 #include "Graph.h"
 #include <map>
-#include "../json.hpp"
+#include "json.hpp"
 
 class Agent;
 
