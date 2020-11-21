@@ -3,7 +3,7 @@
 #include "../include/Session.h"
 #include "../include/Agent.h"
 
-Virus::Virus(int nodeInd):nodeInd(nodeInd), infectedNode(false) {
+Virus::Virus(int nodeInd): Agent(), nodeInd(nodeInd), infectedNode(false) {
 
 }
 
